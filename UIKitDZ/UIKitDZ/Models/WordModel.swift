@@ -3,7 +3,7 @@
 
 import Foundation
 
-/// Структура
+/// Структура со свойством, разворачивающим введенную строку
 struct Word {
     var text: String
     var reversed: String {

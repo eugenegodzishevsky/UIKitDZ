@@ -1,10 +1,10 @@
-// ViewController.swift
+// StartViewController.swift
 // Copyright © RoadMap. All rights reserved.
 
 import UIKit
 
-/// класс
-class ViewController: UIViewController {
+/// Стартовый вью контроллер с окном ввода слова
+final class StartViewController: UIViewController {
     // MARK: - Public Properties
 
     var isButtonMoved = false
@@ -29,7 +29,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        view.backgroundColor = .cyan
+        view.backgroundColor = .white
         addStartButton()
         addYouArePrint()
         addWordLabel()
@@ -87,7 +87,7 @@ class ViewController: UIViewController {
         view.addSubview(newWord)
     }
 
-    @objc func startButtonPressed(sender: UIButton) {
+    @objc private func startButtonPressed(sender: UIButton) {
         let enterWordAlert = UIAlertController(title: "Введите ваше слово", message: nil, preferredStyle: .alert)
         enterWordAlert.addTextField()
         enterWordAlert.textFields?.first?.placeholder = "Введите слово"

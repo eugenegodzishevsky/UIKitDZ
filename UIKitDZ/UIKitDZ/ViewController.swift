@@ -3,14 +3,14 @@
 
 import UIKit
 
-/// Это VC для первого экрана
+/// Контроллер экрана авторизации
 final class ViewController: UIViewController {
     // MARK: - IBOutlets
 
-    @IBOutlet var mailTextField: UITextField!
-    @IBOutlet var passwordTextField: UITextField!
-    @IBOutlet var enterButton: UIButton!
-    @IBOutlet var eyeButton: UIButton!
+    @IBOutlet private var mailTextField: UITextField!
+    @IBOutlet private var passwordTextField: UITextField!
+    @IBOutlet private var enterButton: UIButton!
+    @IBOutlet private var eyeButton: UIButton!
 
     // MARK: - Life Cycle
 
@@ -21,9 +21,9 @@ final class ViewController: UIViewController {
         passwordTextField.addTarget(self, action: #selector(editingChanged), for: .editingChanged)
     }
 
-    // MARK: - Public Methods
+    // MARK: - Private Methods
 
-    @objc func editingChanged(_ textField: UITextField) {
+    @objc private func editingChanged(_ textField: UITextField) {
         guard let email = mailTextField.text,
               !email.isEmpty,
               let password = passwordTextField.text,
@@ -36,9 +36,4 @@ final class ViewController: UIViewController {
         enterButton.isEnabled = true
         enterButton.backgroundColor = .systemTeal
     }
-
-    // MARK: - IBOutlets
-
-    @IBAction func enterButton(_ sender: Any) {}
-    @IBAction func eyeButton(_ sender: Any) {}
 }

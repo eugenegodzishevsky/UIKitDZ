@@ -12,9 +12,9 @@ final class ThirdViewController: UIViewController {
         print("")
     }
 
-    // MARK: - Public Methods
+    // MARK: - IBAction
 
-    @IBAction func payButtonAction(_ sender: Any) {
+    @IBAction private func payButtonAction(_ sender: Any) {
         let alertController = UIAlertController(title: "Вы хотите оплатить счет?", message: nil, preferredStyle: .alert)
         let cancelAction = UIAlertAction(title: "Отмена", style: .cancel)
         let yesAction = UIAlertAction(title: "Да", style: .default) { _ in

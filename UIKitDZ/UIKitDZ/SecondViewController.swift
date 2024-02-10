@@ -7,10 +7,10 @@ import UIKit
 final class SecondViewController: UIViewController {
     // MARK: - IBOutlets
 
-    @IBOutlet var nameTextfield: UITextField!
-    @IBOutlet var numberOfGuestsTextField: UITextField!
-    @IBOutlet var numberOfTheTableTextField: UITextField!
-    @IBOutlet var checkButton: UIButton!
+    @IBOutlet private var nameTextfield: UITextField!
+    @IBOutlet private var numberOfGuestsTextField: UITextField!
+    @IBOutlet private var numberOfTheTableTextField: UITextField!
+    @IBOutlet private var checkButton: UIButton!
 
     // MARK: - Life Cycle
 
@@ -23,9 +23,9 @@ final class SecondViewController: UIViewController {
         numberOfTheTableTextField.addTarget(self, action: #selector(editingChanged), for: .editingChanged)
     }
 
-    // MARK: - Public Methods
+    // MARK: - IBAction
 
-    @IBAction func editingChanged(_ textField: UITextField) {
+    @IBAction private func editingChanged(_ textField: UITextField) {
         guard let name = nameTextfield.text,
               !name.isEmpty,
               let numberOfGuests = numberOfGuestsTextField.text,
@@ -41,7 +41,7 @@ final class SecondViewController: UIViewController {
         checkButton.backgroundColor = .systemTeal
     }
 
-    @IBAction func checkButtonAction(_ sender: Any) {
+    @IBAction private func checkButtonAction(_ sender: Any) {
         let alertController = UIAlertController(title: "Выставить чек?", message: nil, preferredStyle: .alert)
         let cancelAction = UIAlertAction(title: "Отмена", style: .cancel)
         let checkAction = UIAlertAction(title: "Чек", style: .default) { _ in

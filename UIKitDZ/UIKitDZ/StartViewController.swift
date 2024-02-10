@@ -1,12 +1,12 @@
-// ViewController.swift
+// StartViewController.swift
 // Copyright © RoadMap. All rights reserved.
 
 import UIKit
 
 // MARK: - Life Cycle
 
-/// класс
-class ViewController: UIViewController {
+/// Стартовый вью контроллер
+final class StartViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupBackground()
@@ -16,16 +16,6 @@ class ViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         setupNameLabel()
-    }
-
-    // метод для калькулятора
-    @objc func calcPressed(sender: UIButton) {
-        presentCalculatorAlert()
-    }
-
-    // метод для угадай_число
-    @objc func guessPressed(sender: UIButton) {
-        presentGuessAlert()
     }
 
     // MARK: - Private Methods
@@ -189,4 +179,15 @@ class ViewController: UIViewController {
         incorrectAnswerAllert.addAction(okAction)
         present(incorrectAnswerAllert, animated: true)
     }
+    
+    // метод для калькулятора
+    @objc private func calcPressed(sender: UIButton) {
+        presentCalculatorAlert()
+    }
+
+    // метод для угадай_число
+    @objc private func guessPressed(sender: UIButton) {
+        presentGuessAlert()
+    }
 }
+

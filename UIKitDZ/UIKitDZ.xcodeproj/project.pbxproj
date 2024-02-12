@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		DA90388B2B79D04900176708 /* PlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA90388A2B79D04900176708 /* PlayerViewController.swift */; };
+		DA90388D2B79EBA300176708 /* Sugar Dragon.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DA90388C2B79EBA300176708 /* Sugar Dragon.mp3 */; };
+		DA90388F2B79EBBA00176708 /* 01 Constance.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DA90388E2B79EBBA00176708 /* 01 Constance.mp3 */; };
+		DA9038912B79EC4A00176708 /* 01 The Sentinel.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DA9038902B79EC4A00176708 /* 01 The Sentinel.mp3 */; };
 		DAA417DB2B7146B400CF714D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA417DA2B7146B400CF714D /* AppDelegate.swift */; };
 		DAA417DD2B7146B400CF714D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA417DC2B7146B400CF714D /* SceneDelegate.swift */; };
 		DAA417DF2B7146B400CF714D /* PlaylistViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA417DE2B7146B400CF714D /* PlaylistViewController.swift */; };
@@ -18,6 +21,9 @@
 
 /* Begin PBXFileReference section */
 		DA90388A2B79D04900176708 /* PlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerViewController.swift; sourceTree = "<group>"; };
+		DA90388C2B79EBA300176708 /* Sugar Dragon.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "Sugar Dragon.mp3"; path = "../../../../Music/Music/Media.localized/Music/Brutus/Unknown Album/Sugar Dragon.mp3"; sourceTree = "<group>"; };
+		DA90388E2B79EBBA00176708 /* 01 Constance.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "01 Constance.mp3"; path = "../../../../Music/Music/Media.localized/Music/Spiritbox/Unknown Album/01 Constance.mp3"; sourceTree = "<group>"; };
+		DA9038902B79EC4A00176708 /* 01 The Sentinel.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "01 The Sentinel.mp3"; path = "../../../../Music/Music/Media.localized/Music/Car Bomb/w^w^^w^w/01 The Sentinel.mp3"; sourceTree = "<group>"; };
 		DAA417D72B7146B400CF714D /* UIKitDZ.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UIKitDZ.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAA417DA2B7146B400CF714D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DAA417DC2B7146B400CF714D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -64,6 +70,9 @@
 				DA90388A2B79D04900176708 /* PlayerViewController.swift */,
 				DAA417E02B7146B400CF714D /* Main.storyboard */,
 				DAA417E32B7146B600CF714D /* Assets.xcassets */,
+				DA90388C2B79EBA300176708 /* Sugar Dragon.mp3 */,
+				DA90388E2B79EBBA00176708 /* 01 Constance.mp3 */,
+				DA9038902B79EC4A00176708 /* 01 The Sentinel.mp3 */,
 				DAA417E52B7146B600CF714D /* LaunchScreen.storyboard */,
 				DAA417E82B7146B600CF714D /* Info.plist */,
 			);
@@ -132,7 +141,10 @@
 			files = (
 				DAA417E72B7146B600CF714D /* LaunchScreen.storyboard in Resources */,
 				DAA417E42B7146B600CF714D /* Assets.xcassets in Resources */,
+				DA90388F2B79EBBA00176708 /* 01 Constance.mp3 in Resources */,
 				DAA417E22B7146B400CF714D /* Main.storyboard in Resources */,
+				DA90388D2B79EBA300176708 /* Sugar Dragon.mp3 in Resources */,
+				DA9038912B79EC4A00176708 /* 01 The Sentinel.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

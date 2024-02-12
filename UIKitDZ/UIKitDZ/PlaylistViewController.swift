@@ -3,34 +3,47 @@
 
 import UIKit
 
-/// Вью контроллер плейлист
-class PlaylistViewController: UIViewController {
+/// Вью контроллер плейлист первого экрана приложения
+final class PlaylistViewController: UIViewController {
+    // MARK: - IBOutlets
+
     @IBOutlet var track1Label: UILabel!
     @IBOutlet var track2Label: UILabel!
     @IBOutlet var track3Label: UILabel!
+
+    // MARK: - Private Properties
+
+    private var tracks = ["Sugar Dragon", "01 Constance", "01 The Sentinel"]
+
+    // MARK: - Life Cycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         let labels = [track1Label, track2Label, track3Label]
-        for label in labels {
+        for (index, label) in labels.enumerated() {
             let tapGesture = UITapGestureRecognizer(target: self, action: #selector(labelTapped))
             label?.isUserInteractionEnabled = true
             label?.addGestureRecognizer(tapGesture)
+            label?.tag = index
         }
     }
 
-    @objc func labelTapped() {
-        // let playerViewController = PlayerViewController()
+    // MARK: - Private Methods
 
-        // Передайте информацию о треке в следующий ViewController
-        // Здесь 'track' - это информация о треке, которую вы хотите передать
-        // playerViewController.track = track
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        guard let playerViewController = storyboard
-            .instantiateViewController(withIdentifier: "PlayerViewController") as? PlayerViewController else { return }
-        // на Storyboard ID вашего PlayerViewController
-        // Представьте его модально
-        present(playerViewController, animated: true, completion: nil)
+    @objc func labelTapped(_ sender: UITapGestureRecognizer) {
+        if let index = sender.view?.tag {
+            let trackName = tracks[index]
+
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            guard let playerViewController = storyboard
+                .instantiateViewController(withIdentifier: "PlayerViewController") as? PlayerViewController
+            else { return }
+
+            playerViewController.track = trackName
+            playerViewController.tracks = tracks
+
+            present(playerViewController, animated: true, completion: nil)
+        }
     }
 }

@@ -12,46 +12,32 @@ import UIKit
 
 /// Вью контроллер плеера второго экрана приложения
 final class PlayerViewController: UIViewController {
+    // MARK: - Public Properties
+
+    var track: String?
+    var tracks: [String]?
+
     // MARK: - Private Properties
 
     private var player: AVAudioPlayer?
     private var currentTrackIndex = 0
     private var timer: Timer?
 
-    // MARK: - Properties
-
-    var track: String?
-    var tracks: [String]?
-
     // MARK: - IBOutlets
 
-    @IBOutlet var trackTimeLabel: UILabel!
-    @IBOutlet var trackNameLabel: UILabel!
-    @IBOutlet var slider: UISlider!
+    @IBOutlet private var trackTimeLabel: UILabel!
+    @IBOutlet private var trackNameLabel: UILabel!
+    @IBOutlet private var slider: UISlider!
 
     // MARK: - Life Cycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // громкость
-        do {
-            try AVAudioSession.sharedInstance().setCategory(.playback)
-            try AVAudioSession.sharedInstance().setActive(true)
-        } catch {
-            print("Failed to set up audio session: \(error)")
-        }
-        // задний фон
-        if let image = UIImage(named: "background") {
-            view.backgroundColor = UIColor(patternImage: image)
+        setupVolumeButtons()
+        playMusic()
+        setupBackground()
 
-            if let trackName = track, let url = Bundle.main.url(forResource: trackName, withExtension: "mp3") {
-                player = try? AVAudioPlayer(contentsOf: url)
-                player?.play()
-                currentTrackIndex = tracks?.firstIndex(of: trackName) ?? 0
-                trackNameLabel.text = trackName
-            }
-        }
-
+        // слайдер
         slider.minimumValue = 0
         if let duration = player?.duration {
             slider.maximumValue = Float(duration)
@@ -103,6 +89,32 @@ final class PlayerViewController: UIViewController {
     }
 
     // MARK: - Private Methods
+
+    private func setupBackground() {
+        // задний фон
+        if let image = UIImage(named: "background") {
+            view.backgroundColor = UIColor(patternImage: image)
+        }
+    }
+
+    private func playMusic() {
+        if let trackName = track, let url = Bundle.main.url(forResource: trackName, withExtension: "mp3") {
+            player = try? AVAudioPlayer(contentsOf: url)
+            player?.play()
+            currentTrackIndex = tracks?.firstIndex(of: trackName) ?? 0
+            trackNameLabel.text = trackName
+        }
+    }
+
+    private func setupVolumeButtons() {
+        // громкость
+        do {
+            try AVAudioSession.sharedInstance().setCategory(.playback)
+            try AVAudioSession.sharedInstance().setActive(true)
+        } catch {
+            print("Failed to set up audio session: \(error)")
+        }
+    }
 
     private func loadTrack() {
         if let url = Bundle.main.url(forResource: tracks?[currentTrackIndex], withExtension: "mp3") {

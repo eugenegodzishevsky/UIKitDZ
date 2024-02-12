@@ -7,9 +7,9 @@ import UIKit
 final class PlaylistViewController: UIViewController {
     // MARK: - IBOutlets
 
-    @IBOutlet var track1Label: UILabel!
-    @IBOutlet var track2Label: UILabel!
-    @IBOutlet var track3Label: UILabel!
+    @IBOutlet private var track1Label: UILabel!
+    @IBOutlet private var track2Label: UILabel!
+    @IBOutlet private var track3Label: UILabel!
 
     // MARK: - Private Properties
 
@@ -31,7 +31,7 @@ final class PlaylistViewController: UIViewController {
 
     // MARK: - Private Methods
 
-    @objc func labelTapped(_ sender: UITapGestureRecognizer) {
+    @objc private func labelTapped(_ sender: UITapGestureRecognizer) {
         if let index = sender.view?.tag {
             let trackName = tracks[index]
 

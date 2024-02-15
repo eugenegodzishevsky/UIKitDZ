@@ -13,6 +13,8 @@ class MainTabBarController: UITabBarController {
         static let cartTabBarImage = "cartImage"
         static let profileTabBarImage = "person"
         static let pinkColor = "myPink"
+        static let verdana = "Verdana"
+        static let verdanaBold = "Verdana-Bold"
     }
 
     override func viewDidLoad() {
@@ -42,20 +44,26 @@ class MainTabBarController: UITabBarController {
 
     private func generateTabBars() {
         viewControllers = [
-            makeViewControllers(
-                viewController: CatalogViewController(),
-                title: Constants.catalogTabBarName,
-                image: UIImage(named: Constants.catalogTabBarImage)
+            UINavigationController(
+                rootViewController: makeViewControllers(
+                    viewController: CatalogViewController(),
+                    title: Constants.catalogTabBarName,
+                    image: UIImage(named: Constants.catalogTabBarImage)
+                )
             ),
-            makeViewControllers(
-                viewController: CartViewController(),
-                title: Constants.cartTabBarName,
-                image: UIImage(named: Constants.cartTabBarImage)
+            UINavigationController(
+                rootViewController: makeViewControllers(
+                    viewController: CartViewController(),
+                    title: Constants.cartTabBarName,
+                    image: UIImage(named: Constants.cartTabBarImage)
+                )
             ),
-            makeViewControllers(
-                viewController: ProfileViewController(),
-                title: Constants.profileTabBarName,
-                image: UIImage(systemName: Constants.profileTabBarImage)
+            UINavigationController(
+                rootViewController: makeViewControllers(
+                    viewController: ProfileViewController(),
+                    title: Constants.profileTabBarName,
+                    image: UIImage(systemName: Constants.profileTabBarImage)
+                )
             )
         ]
     }

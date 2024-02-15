@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		8BDA18962B7E3C4B009F0961 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BDA18952B7E3C4B009F0961 /* MainTabBarController.swift */; };
 		8BDA18982B7E3D9B009F0961 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8BDA18972B7E3D9B009F0961 /* Colors.xcassets */; };
+		8BDA189E2B7E4D25009F0961 /* UIView+Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BDA189D2B7E4D25009F0961 /* UIView+Extention.swift */; };
+		8BDA18A12B7E5EF8009F0961 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BDA18A02B7E5EF8009F0961 /* UIViewController+Extension.swift */; };
+		8BDA18A32B7E849B009F0961 /* UserDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BDA18A22B7E849B009F0961 /* UserDataViewController.swift */; };
 		DA87556D2B7DF630009B8CFF /* CartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA87556C2B7DF630009B8CFF /* CartViewController.swift */; };
 		DA87556F2B7DF649009B8CFF /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA87556E2B7DF649009B8CFF /* ProfileViewController.swift */; };
 		DAA417DB2B7146B400CF714D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA417DA2B7146B400CF714D /* AppDelegate.swift */; };
@@ -21,6 +24,9 @@
 /* Begin PBXFileReference section */
 		8BDA18952B7E3C4B009F0961 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		8BDA18972B7E3D9B009F0961 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		8BDA189D2B7E4D25009F0961 /* UIView+Extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extention.swift"; sourceTree = "<group>"; };
+		8BDA18A02B7E5EF8009F0961 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
+		8BDA18A22B7E849B009F0961 /* UserDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataViewController.swift; sourceTree = "<group>"; };
 		DA87556C2B7DF630009B8CFF /* CartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewController.swift; sourceTree = "<group>"; };
 		DA87556E2B7DF649009B8CFF /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		DAA417D72B7146B400CF714D /* UIKitDZ.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UIKitDZ.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -43,6 +49,43 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8BDA18992B7E4CB1009F0961 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				8BDA189D2B7E4D25009F0961 /* UIView+Extention.swift */,
+				8BDA18A02B7E5EF8009F0961 /* UIViewController+Extension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		8BDA189A2B7E4CBE009F0961 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				8BDA18952B7E3C4B009F0961 /* MainTabBarController.swift */,
+				DA87556C2B7DF630009B8CFF /* CartViewController.swift */,
+				DAA417DE2B7146B400CF714D /* CatalogViewController.swift */,
+				DA87556E2B7DF649009B8CFF /* ProfileViewController.swift */,
+				8BDA18A22B7E849B009F0961 /* UserDataViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		8BDA189B2B7E4CCE009F0961 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DAA417DA2B7146B400CF714D /* AppDelegate.swift */,
+				DAA417DC2B7146B400CF714D /* SceneDelegate.swift */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		8BDA189C2B7E4CE2009F0961 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		DAA417CE2B7146B400CF714D = {
 			isa = PBXGroup;
 			children = (
@@ -62,12 +105,10 @@
 		DAA417D92B7146B400CF714D /* UIKitDZ */ = {
 			isa = PBXGroup;
 			children = (
-				DAA417DA2B7146B400CF714D /* AppDelegate.swift */,
-				DAA417DC2B7146B400CF714D /* SceneDelegate.swift */,
-				8BDA18952B7E3C4B009F0961 /* MainTabBarController.swift */,
-				DAA417DE2B7146B400CF714D /* CatalogViewController.swift */,
-				DA87556C2B7DF630009B8CFF /* CartViewController.swift */,
-				DA87556E2B7DF649009B8CFF /* ProfileViewController.swift */,
+				8BDA189B2B7E4CCE009F0961 /* Supporting Files */,
+				8BDA189A2B7E4CBE009F0961 /* Controller */,
+				8BDA189C2B7E4CE2009F0961 /* Model */,
+				8BDA18992B7E4CB1009F0961 /* Extension */,
 				DAA417E32B7146B600CF714D /* Assets.xcassets */,
 				8BDA18972B7E3D9B009F0961 /* Colors.xcassets */,
 				DAA417E52B7146B600CF714D /* LaunchScreen.storyboard */,
@@ -192,9 +233,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8BDA18A12B7E5EF8009F0961 /* UIViewController+Extension.swift in Sources */,
 				DA87556F2B7DF649009B8CFF /* ProfileViewController.swift in Sources */,
 				DAA417DF2B7146B400CF714D /* CatalogViewController.swift in Sources */,
+				8BDA18A32B7E849B009F0961 /* UserDataViewController.swift in Sources */,
 				8BDA18962B7E3C4B009F0961 /* MainTabBarController.swift in Sources */,
+				8BDA189E2B7E4D25009F0961 /* UIView+Extention.swift in Sources */,
 				DAA417DB2B7146B400CF714D /* AppDelegate.swift in Sources */,
 				DA87556D2B7DF630009B8CFF /* CartViewController.swift in Sources */,
 				DAA417DD2B7146B400CF714D /* SceneDelegate.swift in Sources */,

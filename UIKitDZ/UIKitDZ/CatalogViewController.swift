@@ -15,8 +15,7 @@ class CatalogViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "Каталог"
-        view.backgroundColor = .brown
+        view.backgroundColor = .white
         print("ViewDidLoad")
     }
 }

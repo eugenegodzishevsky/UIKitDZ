@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8BDA18962B7E3C4B009F0961 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BDA18952B7E3C4B009F0961 /* MainTabBarController.swift */; };
+		8BDA18982B7E3D9B009F0961 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8BDA18972B7E3D9B009F0961 /* Colors.xcassets */; };
 		DA87556D2B7DF630009B8CFF /* CartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA87556C2B7DF630009B8CFF /* CartViewController.swift */; };
 		DA87556F2B7DF649009B8CFF /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA87556E2B7DF649009B8CFF /* ProfileViewController.swift */; };
 		DAA417DB2B7146B400CF714D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA417DA2B7146B400CF714D /* AppDelegate.swift */; };
@@ -17,6 +19,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8BDA18952B7E3C4B009F0961 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		8BDA18972B7E3D9B009F0961 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		DA87556C2B7DF630009B8CFF /* CartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewController.swift; sourceTree = "<group>"; };
 		DA87556E2B7DF649009B8CFF /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		DAA417D72B7146B400CF714D /* UIKitDZ.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UIKitDZ.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -60,10 +64,12 @@
 			children = (
 				DAA417DA2B7146B400CF714D /* AppDelegate.swift */,
 				DAA417DC2B7146B400CF714D /* SceneDelegate.swift */,
+				8BDA18952B7E3C4B009F0961 /* MainTabBarController.swift */,
 				DAA417DE2B7146B400CF714D /* CatalogViewController.swift */,
 				DA87556C2B7DF630009B8CFF /* CartViewController.swift */,
 				DA87556E2B7DF649009B8CFF /* ProfileViewController.swift */,
 				DAA417E32B7146B600CF714D /* Assets.xcassets */,
+				8BDA18972B7E3D9B009F0961 /* Colors.xcassets */,
 				DAA417E52B7146B600CF714D /* LaunchScreen.storyboard */,
 				DAA417E82B7146B600CF714D /* Info.plist */,
 			);
@@ -130,6 +136,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8BDA18982B7E3D9B009F0961 /* Colors.xcassets in Resources */,
 				DAA417E72B7146B600CF714D /* LaunchScreen.storyboard in Resources */,
 				DAA417E42B7146B600CF714D /* Assets.xcassets in Resources */,
 			);
@@ -187,6 +194,7 @@
 			files = (
 				DA87556F2B7DF649009B8CFF /* ProfileViewController.swift in Sources */,
 				DAA417DF2B7146B400CF714D /* CatalogViewController.swift in Sources */,
+				8BDA18962B7E3C4B009F0961 /* MainTabBarController.swift in Sources */,
 				DAA417DB2B7146B400CF714D /* AppDelegate.swift in Sources */,
 				DA87556D2B7DF630009B8CFF /* CartViewController.swift in Sources */,
 				DAA417DD2B7146B400CF714D /* SceneDelegate.swift in Sources */,
@@ -257,7 +265,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = NO;
@@ -311,7 +319,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = NO;

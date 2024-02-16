@@ -234,7 +234,9 @@ class UserDataViewController: UIViewController {
         isAnyTextFieldChanged = !text.isEmpty && !text.contains(" ") ? true : false
     }
 
-    @objc private func saveButtonTapped() {}
+    @objc private func saveButtonTapped() {
+        navigationController?.popViewController(animated: true)
+    }
 
     @objc private func returnToVC() {
         navigationController?.popViewController(animated: true)

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8BCD91CF2B7F0FB500EF5B6B /* FootSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BCD91CE2B7F0FB500EF5B6B /* FootSize.swift */; };
 		8BDA18962B7E3C4B009F0961 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BDA18952B7E3C4B009F0961 /* MainTabBarController.swift */; };
 		8BDA18982B7E3D9B009F0961 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8BDA18972B7E3D9B009F0961 /* Colors.xcassets */; };
 		8BDA189E2B7E4D25009F0961 /* UIView+Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BDA189D2B7E4D25009F0961 /* UIView+Extention.swift */; };
@@ -22,6 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8BCD91CE2B7F0FB500EF5B6B /* FootSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FootSize.swift; sourceTree = "<group>"; };
 		8BDA18952B7E3C4B009F0961 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		8BDA18972B7E3D9B009F0961 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		8BDA189D2B7E4D25009F0961 /* UIView+Extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extention.swift"; sourceTree = "<group>"; };
@@ -82,6 +84,7 @@
 		8BDA189C2B7E4CE2009F0961 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				8BCD91CE2B7F0FB500EF5B6B /* FootSize.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -237,6 +240,7 @@
 				DA87556F2B7DF649009B8CFF /* ProfileViewController.swift in Sources */,
 				DAA417DF2B7146B400CF714D /* CatalogViewController.swift in Sources */,
 				8BDA18A32B7E849B009F0961 /* UserDataViewController.swift in Sources */,
+				8BCD91CF2B7F0FB500EF5B6B /* FootSize.swift in Sources */,
 				8BDA18962B7E3C4B009F0961 /* MainTabBarController.swift in Sources */,
 				8BDA189E2B7E4D25009F0961 /* UIView+Extention.swift in Sources */,
 				DAA417DB2B7146B400CF714D /* AppDelegate.swift in Sources */,

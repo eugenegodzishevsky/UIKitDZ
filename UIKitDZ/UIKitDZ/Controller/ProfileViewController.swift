@@ -134,13 +134,21 @@ class ProfileViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
+        setupNavigationBar()
         setupAnchors()
     }
 
     // MARK: - Private Methods
 
-    private func setupUI() {
+    private func setupNavigationBar() {
         title = MainTabBarController.Constants.profileTabBarName
+        navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.font: UIFont(
+            name: "Verdana-Bold",
+            size: 16
+        ) ?? ""]
+    }
+
+    private func setupUI() {
         view.backgroundColor = .white
         view.addSubview(userCardView)
         userCardView.addSubview(userCardImageView)
@@ -158,11 +166,13 @@ class ProfileViewController: UIViewController {
         view.addSubview(myDataImageView)
         view.addSubview(friendInvitationImageView)
         view.addSubview(feedBackImageView)
+        setupTapRecognizer()
     }
 
     private func setupTapRecognizer() {
         let tapRecognizer = UITapGestureRecognizer()
         tapRecognizer.addTarget(self, action: #selector(navigateToMyDataVC))
+        myDataLabel.isUserInteractionEnabled = true
         myDataLabel.addGestureRecognizer(tapRecognizer)
     }
 
@@ -229,5 +239,8 @@ class ProfileViewController: UIViewController {
         feedBackImageView.heightAnchor.constraint(equalToConstant: 20).isActive = true
     }
 
-    @objc func navigateToMyDataVC() {}
+    @objc func navigateToMyDataVC() {
+        let userDataVC = UserDataViewController()
+        navigationController?.pushViewController(userDataVC, animated: true)
+    }
 }

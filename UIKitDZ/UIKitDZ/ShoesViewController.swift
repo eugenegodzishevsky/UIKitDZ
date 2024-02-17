@@ -144,11 +144,12 @@ final class ShoesViewController: UIViewController {
 
                     let sizeViewController = SizeViewController()
                     sizeViewController.delegate = cartViewController
-                    if sizeViewController.delegate == nil {
-                        print("Delegate is nil")
-                    } else {
-                        print("Delegate is not nil")
-                    }
+//                    sizeViewController.delegate = cartViewController
+//                    if sizeViewController.delegate == nil {
+//                        print("Delegate is nil")
+//                    } else {
+//                        print("Delegate is not nil")
+//                    }
 
                     present(sizeViewController, animated: true, completion: nil)
                 }

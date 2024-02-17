@@ -336,6 +336,7 @@ class CatalogViewController: UIViewController, UIImagePickerControllerDelegate &
                 let firstViewController = navController.viewControllers.first
                 if let cartViewController = firstViewController as? CartViewController {
                     shoesViewController.delegate = cartViewController
+                    shoesViewController.cartViewController = cartViewController
                     break
                 }
             }

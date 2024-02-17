@@ -8,6 +8,7 @@ class CatalogViewController: UIViewController, UIImagePickerControllerDelegate &
     private let category = Category()
     let subcategories = ["Бренды", "Обувь", "Сумки"]
     var imageViews: [UIImageView] = []
+//    var shoesViewController: ShoesViewController?
 
     private lazy var categorySegmentedControl: UISegmentedControl = {
         let segmentedControl = UISegmentedControl(items: category.categoryTypes)

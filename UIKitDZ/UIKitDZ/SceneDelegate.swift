@@ -4,9 +4,8 @@
 import UIKit
 
 /// класс SceneDelegate
-class SceneDelegate: UIResponder, UIWindowSceneDelegate {
+final class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     var window: UIWindow?
-    let cartVC = CartViewController()
 
     func scene(
         _ scene: UIScene,
@@ -18,6 +17,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let window = UIWindow(windowScene: windowScene)
 
         let catalogVC = CatalogViewController()
+        let cartVC = CartViewController()
         let profileVC = ProfileViewController()
 
         let catalogNavVC = UINavigationController(rootViewController: catalogVC)

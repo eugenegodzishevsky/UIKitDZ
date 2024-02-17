@@ -10,9 +10,7 @@ protocol ShoesViewControllerDelegate: AnyObject {
 
 /// экран с выбором обуви
 final class ShoesViewController: UIViewController {
-    weak var cartViewController: CartViewController?
-
-    // let cartViewController = CartViewController()
+    let cartViewController = CartViewController()
     weak var delegate: ShoesViewControllerDelegate?
 
     // MARK: UI

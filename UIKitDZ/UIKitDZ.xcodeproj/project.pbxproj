@@ -14,6 +14,9 @@
 		DAA417DF2B7146B400CF714D /* CatalogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA417DE2B7146B400CF714D /* CatalogViewController.swift */; };
 		DAA417E42B7146B600CF714D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DAA417E32B7146B600CF714D /* Assets.xcassets */; };
 		DAA417E72B7146B600CF714D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAA417E52B7146B600CF714D /* LaunchScreen.storyboard */; };
+		DAA942A52B7E72BB0088C408 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA942A42B7E72BB0088C408 /* Model.swift */; };
+		DAA942A72B7F2D880088C408 /* ShoesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA942A62B7F2D880088C408 /* ShoesViewController.swift */; };
+		DAA942A92B7F4CDA0088C408 /* SizeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA942A82B7F4CDA0088C408 /* SizeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,9 @@
 		DAA417E32B7146B600CF714D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DAA417E62B7146B600CF714D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DAA417E82B7146B600CF714D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DAA942A42B7E72BB0088C408 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		DAA942A62B7F2D880088C408 /* ShoesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoesViewController.swift; sourceTree = "<group>"; };
+		DAA942A82B7F4CDA0088C408 /* SizeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SizeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,7 +67,10 @@
 				DAA417DA2B7146B400CF714D /* AppDelegate.swift */,
 				DAA417DC2B7146B400CF714D /* SceneDelegate.swift */,
 				DAA417DE2B7146B400CF714D /* CatalogViewController.swift */,
+				DAA942A42B7E72BB0088C408 /* Model.swift */,
 				DA87556C2B7DF630009B8CFF /* CartViewController.swift */,
+				DAA942A62B7F2D880088C408 /* ShoesViewController.swift */,
+				DAA942A82B7F4CDA0088C408 /* SizeViewController.swift */,
 				DA87556E2B7DF649009B8CFF /* ProfileViewController.swift */,
 				DAA417E32B7146B600CF714D /* Assets.xcassets */,
 				DAA417E52B7146B600CF714D /* LaunchScreen.storyboard */,
@@ -188,6 +197,9 @@
 				DA87556F2B7DF649009B8CFF /* ProfileViewController.swift in Sources */,
 				DAA417DF2B7146B400CF714D /* CatalogViewController.swift in Sources */,
 				DAA417DB2B7146B400CF714D /* AppDelegate.swift in Sources */,
+				DAA942A52B7E72BB0088C408 /* Model.swift in Sources */,
+				DAA942A72B7F2D880088C408 /* ShoesViewController.swift in Sources */,
+				DAA942A92B7F4CDA0088C408 /* SizeViewController.swift in Sources */,
 				DA87556D2B7DF630009B8CFF /* CartViewController.swift in Sources */,
 				DAA417DD2B7146B400CF714D /* SceneDelegate.swift in Sources */,
 			);

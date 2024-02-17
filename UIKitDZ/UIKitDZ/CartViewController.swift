@@ -3,23 +3,32 @@
 
 import UIKit
 
-/// класс
-class CartViewController: UIViewController {
+/// экран корзины
+final class CartViewController: UIViewController {
+    var selectedImage = [String?]()
+    var selectedLabelText = [String?]()
+    var selectedSize = [String?]()
+
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .cyan
         title = "Корзина"
 
-        // Do any additional setup after loading the view.
+        print(selectedImage)
+        print(selectedLabelText)
+        print(selectedSize)
+    }
+}
+
+extension CartViewController: ShoesViewControllerDelegate, SizeViewControllerDelegate {
+    func didSelectShoe(imageName: String, labelText: String) {
+        print("extension  Image Label")
+        selectedImage.append(imageName)
+        selectedLabelText.append(labelText)
     }
 
-    /*
-     // MARK: - Navigation
-
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-         // Get the new view controller using segue.destination.
-         // Pass the selected object to the new view controller.
-     }
-     */
+    func didSelectSize(size: String) {
+        print("extension Size")
+        selectedSize.append(size)
+    }
 }

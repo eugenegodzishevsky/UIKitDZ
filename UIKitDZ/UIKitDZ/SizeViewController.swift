@@ -106,12 +106,12 @@ final class SizeViewController: UIViewController {
         if let label = sender.view as? UILabel, let size = label.text {
             print("label tapped")
             delegate?.didSelectSize(size: size)
-            print(label.text ?? "")
-            if delegate == nil {
-                print("Delegate is nil")
-            } else {
-                print("Delegate is not nil")
-            }
+//            print(label.text ?? "")
+//            if delegate == nil {
+//                print("Delegate is nil")
+//            } else {
+//                print("Delegate is not nil")
+//            }
         }
     }
 

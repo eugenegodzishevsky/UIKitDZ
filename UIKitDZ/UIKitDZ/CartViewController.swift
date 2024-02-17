@@ -22,13 +22,13 @@ final class CartViewController: UIViewController {
 
 extension CartViewController: ShoesViewControllerDelegate, SizeViewControllerDelegate {
     func didSelectShoe(imageName: String, labelText: String) {
-        print("extension  Image Label")
+        print("SHOES DELEGATE HERE")
         selectedImage.append(imageName)
         selectedLabelText.append(labelText)
     }
 
     func didSelectSize(size: String) {
-        print("extension Size")
+        print("SIZE DELEGATE HERE")
         selectedSize.append(size)
     }
 }

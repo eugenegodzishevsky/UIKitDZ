@@ -5,12 +5,11 @@ import UIKit
 
 protocol ShoesViewControllerDelegate: AnyObject {
     func didSelectShoe(imageName: String, labelText: String)
-    // func didSelectSize(size: String)
 }
 
 /// экран с выбором обуви
 final class ShoesViewController: UIViewController {
-    let cartViewController = CartViewController()
+    var cartViewController = CartViewController()
     weak var delegate: ShoesViewControllerDelegate?
 
     // MARK: UI
@@ -144,12 +143,6 @@ final class ShoesViewController: UIViewController {
 
                     let sizeViewController = SizeViewController()
                     sizeViewController.delegate = cartViewController
-//                    sizeViewController.delegate = cartViewController
-//                    if sizeViewController.delegate == nil {
-//                        print("Delegate is nil")
-//                    } else {
-//                        print("Delegate is not nil")
-//                    }
 
                     present(sizeViewController, animated: true, completion: nil)
                 }

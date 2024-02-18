@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8B7634A02B81DBD40070279C /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B76349F2B81DBD40070279C /* UIViewController+Extension.swift */; };
 		DA87556D2B7DF630009B8CFF /* CartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA87556C2B7DF630009B8CFF /* CartViewController.swift */; };
 		DA87556F2B7DF649009B8CFF /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA87556E2B7DF649009B8CFF /* ProfileViewController.swift */; };
 		DAA417DB2B7146B400CF714D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA417DA2B7146B400CF714D /* AppDelegate.swift */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8B76349F2B81DBD40070279C /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		DA87556C2B7DF630009B8CFF /* CartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewController.swift; sourceTree = "<group>"; };
 		DA87556E2B7DF649009B8CFF /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		DAA417D72B7146B400CF714D /* UIKitDZ.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UIKitDZ.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -75,6 +77,7 @@
 				DAA417E32B7146B600CF714D /* Assets.xcassets */,
 				DAA417E52B7146B600CF714D /* LaunchScreen.storyboard */,
 				DAA417E82B7146B600CF714D /* Info.plist */,
+				8B76349F2B81DBD40070279C /* UIViewController+Extension.swift */,
 			);
 			path = UIKitDZ;
 			sourceTree = "<group>";
@@ -194,6 +197,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8B7634A02B81DBD40070279C /* UIViewController+Extension.swift in Sources */,
 				DA87556F2B7DF649009B8CFF /* ProfileViewController.swift in Sources */,
 				DAA417DF2B7146B400CF714D /* CatalogViewController.swift in Sources */,
 				DAA417DB2B7146B400CF714D /* AppDelegate.swift in Sources */,

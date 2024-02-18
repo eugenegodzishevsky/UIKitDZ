@@ -5,13 +5,38 @@ import UIKit
 
 /// экран корзины
 final class CartViewController: UIViewController {
+    enum Constants {
+        static let totalBillText = "Оформить заказ - "
+    }
+
+    private lazy var totalBillButton = makeCustomButton(text: Constants.totalBillText)
+    private lazy var quantityLabel = {
+        let label = UILabel()
+        label.text = "\(quantity)"
+        label.textAlignment = .center
+        label.font = UIFont(name: "Verdana", size: 12)
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
+    }()
+
     var selectedImage = [String?]()
     var selectedLabelText = [String?]()
     var selectedSize = [String?]()
     var cartItems = [UIView?]()
 
-    var quantity = 1
+    var quantity = 1 {
+        didSet {
+            quantityLabel.text = String(quantity)
+        }
+    }
+
     var price = 0
+    var currentPrice = 0 {
+        didSet {
+            totalBillButton.setTitle(Constants.totalBillText + String(currentPrice), for: .normal)
+            print(currentPrice)
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,12 +59,13 @@ final class CartViewController: UIViewController {
         for index in 0 ..< selectedImage.count {
             let imageName = selectedImage[index] ?? ""
             let labelText = selectedLabelText[index] ?? ""
-
+            let stringLabel = labelText.components(separatedBy: CharacterSet.decimalDigits.inverted).joined()
             if let lastItem = cartItems.last {
                 let newBaseView = createCustomView(withImageNamed: imageName, priceLabelText: labelText)
                 view.addSubview(newBaseView)
                 cartItems.append(newBaseView)
-
+                price = Int(stringLabel) ?? 100_000
+                currentPrice = Int(stringLabel) ?? 100_000
                 NSLayoutConstraint.activate([
                     newBaseView.topAnchor.constraint(
                         equalTo: lastItem?.bottomAnchor ?? view.bottomAnchor,
@@ -53,7 +79,8 @@ final class CartViewController: UIViewController {
                 let newBaseView = createCustomView(withImageNamed: imageName, priceLabelText: labelText)
                 view.addSubview(newBaseView)
                 cartItems.append(newBaseView)
-
+                price = Int(stringLabel) ?? 100_000
+                currentPrice = Int(stringLabel) ?? 100_000
                 NSLayoutConstraint.activate([
                     newBaseView.topAnchor.constraint(equalTo: view.topAnchor, constant: 130),
                     newBaseView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
@@ -97,7 +124,7 @@ final class CartViewController: UIViewController {
 
         let priceLabel = UILabel()
         priceLabel.text = priceLabelText
-        price = Int(Double(priceLabel.text ?? "0") ?? 0)
+//        currentPrice = Int(Double(priceLabel.text ?? "0") ?? 0)
         // priceLabel.text = "\(price)"
 
         priceLabel.textAlignment = .right
@@ -127,13 +154,6 @@ final class CartViewController: UIViewController {
         pricingLabel.textAlignment = .left
         pricingLabel.font = UIFont(name: "Verdana", size: 12)
         pricingLabel.translatesAutoresizingMaskIntoConstraints = false
-
-        let quantityLabel = UILabel()
-        quantityLabel.text = "\(quantity)"
-
-        quantityLabel.textAlignment = .center
-        quantityLabel.font = UIFont(name: "Verdana", size: 12)
-        quantityLabel.translatesAutoresizingMaskIntoConstraints = false
 
         func setupSizeButtons(size: String) -> UIButton {
             let button = UIButton()
@@ -297,17 +317,15 @@ final class CartViewController: UIViewController {
             print("-")
             if quantity > 0 {
                 quantity -= 1
-                price /= 2
-                print(price)
-                setupUI()
+                currentPrice -= price
+//                setupUI()
             }
         } else {
             print("+")
             quantity += 1
             print(quantity)
-            price *= 2
-            print(price)
-            setupUI()
+            currentPrice += price
+//            setupUI()
         }
 //        priceLabel.text = "\(price)"
 //        setupUI()

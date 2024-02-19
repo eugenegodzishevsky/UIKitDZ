@@ -58,7 +58,7 @@ class UserDataViewController: UIViewController {
     // MARK: - Private Properties
 
     private let size = FootSize()
-    private lazy var phoneNumberRegex: NSRegularExpression = {
+    private var phoneNumberRegex: NSRegularExpression = {
         var regex = NSRegularExpression()
         do {
             try regex = NSRegularExpression(pattern: "[\\+\\s-\\(\\)]", options: .caseInsensitive)
@@ -153,18 +153,24 @@ class UserDataViewController: UIViewController {
     }
 
     private func format(phoneNumber: String, shouldRemoveLastDigit: Bool) -> String {
+        guard !(shouldRemoveLastDigit && phoneNumber.count <= 2) else { return "+" }
+
         let range = NSString(string: phoneNumber).range(of: phoneNumber)
         var number = phoneNumberRegex.stringByReplacingMatches(in: phoneNumber, range: range, withTemplate: "")
+
         if number.count > Constants.maxNumberCount {
             let maxIndex = number.index(number.startIndex, offsetBy: Constants.maxNumberCount)
             number = String(number[number.startIndex ..< maxIndex])
         }
+
         if shouldRemoveLastDigit {
             let maxIndex = number.index(number.startIndex, offsetBy: number.count - 1)
             number = String(number[number.startIndex ..< maxIndex])
         }
+
         let maxIndex = number.index(number.startIndex, offsetBy: number.count)
         let regRange = number.startIndex ..< maxIndex
+
         if number.count < 7 {
             let pattern = "(\\d)(\\d{3})(\\d+)"
             number = number.replacingOccurrences(

@@ -68,7 +68,7 @@ final class CartViewController: UIViewController {
                 currentPrice = Int(stringLabel) ?? 100_000
                 NSLayoutConstraint.activate([
                     newBaseView.topAnchor.constraint(
-                        equalTo: lastItem?.bottomAnchor ?? view.bottomAnchor,
+                        equalTo: lastItem?.bottomAnchor ?? view.topAnchor,
                         constant: 20
                     ),
                     newBaseView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),

@@ -13,17 +13,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         options _: UIScene.ConnectionOptions
     ) {
         guard let windowScene = (scene as? UIWindowScene) else { return }
-
         let window = UIWindow(windowScene: windowScene)
-
-        let catalogVC = CatalogViewController()
-        let cartVC = CartViewController()
-        let profileVC = ProfileViewController()
-
-        let tabBarController = UITabBarController()
-
-        tabBarController.viewControllers = [catalogVC, cartVC, profileVC]
-
+        let tabBarController = MainTabBarController()
         window.rootViewController = tabBarController
         window.makeKeyAndVisible()
         self.window = window

@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "logoR.pdf",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

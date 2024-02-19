@@ -13,11 +13,15 @@
 		8BDA189E2B7E4D25009F0961 /* UIView+Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BDA189D2B7E4D25009F0961 /* UIView+Extention.swift */; };
 		8BDA18A12B7E5EF8009F0961 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BDA18A02B7E5EF8009F0961 /* UIViewController+Extension.swift */; };
 		8BDA18A32B7E849B009F0961 /* UserDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BDA18A22B7E849B009F0961 /* UserDataViewController.swift */; };
-		DA87556D2B7DF630009B8CFF /* CartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA87556C2B7DF630009B8CFF /* CartViewController.swift */; };
 		DA87556F2B7DF649009B8CFF /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA87556E2B7DF649009B8CFF /* ProfileViewController.swift */; };
+		DA9241192B837AAB00F30C77 /* 1CartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA92410F2B837AAA00F30C77 /* 1CartViewController.swift */; };
+		DA92411A2B837AAB00F30C77 /* 1SizeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9241102B837AAA00F30C77 /* 1SizeViewController.swift */; };
+		DA92411E2B837AAB00F30C77 /* 1ShoesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9241142B837AAA00F30C77 /* 1ShoesViewController.swift */; };
+		DA92411F2B837AAB00F30C77 /* 1Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9241152B837AAA00F30C77 /* 1Model.swift */; };
+		DA9241202B837AAB00F30C77 /* 1UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9241162B837AAA00F30C77 /* 1UIViewController+Extension.swift */; };
+		DA9241212B837AAB00F30C77 /* 1CatalogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9241172B837AAB00F30C77 /* 1CatalogViewController.swift */; };
 		DAA417DB2B7146B400CF714D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA417DA2B7146B400CF714D /* AppDelegate.swift */; };
 		DAA417DD2B7146B400CF714D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA417DC2B7146B400CF714D /* SceneDelegate.swift */; };
-		DAA417DF2B7146B400CF714D /* CatalogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA417DE2B7146B400CF714D /* CatalogViewController.swift */; };
 		DAA417E42B7146B600CF714D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DAA417E32B7146B600CF714D /* Assets.xcassets */; };
 		DAA417E72B7146B600CF714D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAA417E52B7146B600CF714D /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
@@ -29,15 +33,19 @@
 		8BDA189D2B7E4D25009F0961 /* UIView+Extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extention.swift"; sourceTree = "<group>"; };
 		8BDA18A02B7E5EF8009F0961 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		8BDA18A22B7E849B009F0961 /* UserDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataViewController.swift; sourceTree = "<group>"; };
-		DA87556C2B7DF630009B8CFF /* CartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewController.swift; sourceTree = "<group>"; };
 		DA87556E2B7DF649009B8CFF /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		DA92410F2B837AAA00F30C77 /* 1CartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = 1CartViewController.swift; path = UIKitDZ/1CartViewController.swift; sourceTree = SOURCE_ROOT; };
+		DA9241102B837AAA00F30C77 /* 1SizeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = 1SizeViewController.swift; path = UIKitDZ/1SizeViewController.swift; sourceTree = SOURCE_ROOT; };
+		DA9241112B837AAA00F30C77 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = UIKitDZ/Info.plist; sourceTree = SOURCE_ROOT; };
+		DA9241142B837AAA00F30C77 /* 1ShoesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = 1ShoesViewController.swift; path = UIKitDZ/1ShoesViewController.swift; sourceTree = SOURCE_ROOT; };
+		DA9241152B837AAA00F30C77 /* 1Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = 1Model.swift; path = UIKitDZ/1Model.swift; sourceTree = SOURCE_ROOT; };
+		DA9241162B837AAA00F30C77 /* 1UIViewController+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "1UIViewController+Extension.swift"; path = "UIKitDZ/1UIViewController+Extension.swift"; sourceTree = SOURCE_ROOT; };
+		DA9241172B837AAB00F30C77 /* 1CatalogViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = 1CatalogViewController.swift; path = UIKitDZ/1CatalogViewController.swift; sourceTree = SOURCE_ROOT; };
 		DAA417D72B7146B400CF714D /* UIKitDZ.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UIKitDZ.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAA417DA2B7146B400CF714D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DAA417DC2B7146B400CF714D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		DAA417DE2B7146B400CF714D /* CatalogViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogViewController.swift; sourceTree = "<group>"; };
 		DAA417E32B7146B600CF714D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DAA417E62B7146B600CF714D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		DAA417E82B7146B600CF714D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,8 +72,6 @@
 			isa = PBXGroup;
 			children = (
 				8BDA18952B7E3C4B009F0961 /* MainTabBarController.swift */,
-				DA87556C2B7DF630009B8CFF /* CartViewController.swift */,
-				DAA417DE2B7146B400CF714D /* CatalogViewController.swift */,
 				DA87556E2B7DF649009B8CFF /* ProfileViewController.swift */,
 				8BDA18A22B7E849B009F0961 /* UserDataViewController.swift */,
 			);
@@ -76,6 +82,12 @@
 			isa = PBXGroup;
 			children = (
 				DAA417DA2B7146B400CF714D /* AppDelegate.swift */,
+				DA92410F2B837AAA00F30C77 /* 1CartViewController.swift */,
+				DA9241172B837AAB00F30C77 /* 1CatalogViewController.swift */,
+				DA9241152B837AAA00F30C77 /* 1Model.swift */,
+				DA9241142B837AAA00F30C77 /* 1ShoesViewController.swift */,
+				DA9241102B837AAA00F30C77 /* 1SizeViewController.swift */,
+				DA9241162B837AAA00F30C77 /* 1UIViewController+Extension.swift */,
 				DAA417DC2B7146B400CF714D /* SceneDelegate.swift */,
 			);
 			path = "Supporting Files";
@@ -115,7 +127,7 @@
 				DAA417E32B7146B600CF714D /* Assets.xcassets */,
 				8BDA18972B7E3D9B009F0961 /* Colors.xcassets */,
 				DAA417E52B7146B600CF714D /* LaunchScreen.storyboard */,
-				DAA417E82B7146B600CF714D /* Info.plist */,
+				DA9241112B837AAA00F30C77 /* Info.plist */,
 			);
 			path = UIKitDZ;
 			sourceTree = "<group>";
@@ -237,14 +249,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				8BDA18A12B7E5EF8009F0961 /* UIViewController+Extension.swift in Sources */,
+				DA92411F2B837AAB00F30C77 /* 1Model.swift in Sources */,
+				DA9241202B837AAB00F30C77 /* 1UIViewController+Extension.swift in Sources */,
 				DA87556F2B7DF649009B8CFF /* ProfileViewController.swift in Sources */,
-				DAA417DF2B7146B400CF714D /* CatalogViewController.swift in Sources */,
+				DA9241192B837AAB00F30C77 /* 1CartViewController.swift in Sources */,
+				DA92411A2B837AAB00F30C77 /* 1SizeViewController.swift in Sources */,
+				DA92411E2B837AAB00F30C77 /* 1ShoesViewController.swift in Sources */,
+				DA9241212B837AAB00F30C77 /* 1CatalogViewController.swift in Sources */,
 				8BDA18A32B7E849B009F0961 /* UserDataViewController.swift in Sources */,
 				8BCD91CF2B7F0FB500EF5B6B /* FootSize.swift in Sources */,
 				8BDA18962B7E3C4B009F0961 /* MainTabBarController.swift in Sources */,
 				8BDA189E2B7E4D25009F0961 /* UIView+Extention.swift in Sources */,
 				DAA417DB2B7146B400CF714D /* AppDelegate.swift in Sources */,
-				DA87556D2B7DF630009B8CFF /* CartViewController.swift in Sources */,
 				DAA417DD2B7146B400CF714D /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -392,6 +408,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -419,6 +436,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

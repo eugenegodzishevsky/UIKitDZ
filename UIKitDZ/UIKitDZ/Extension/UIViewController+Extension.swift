@@ -4,7 +4,7 @@
 import UIKit
 
 extension UIViewController {
-    enum Constants {
+    enum NewConstants {
         static let backgroundColor = UIColor(red: 248 / 255, green: 248 / 255, blue: 248 / 255, alpha: 1.0)
         static let buttonBackgroundColor = UIColor(named: "myPink")
         static let cornerRadius: CGFloat = 12
@@ -13,7 +13,7 @@ extension UIViewController {
     }
 
     /// создает кастомный label
-    func makeCustomLabel(
+    func makeNewCustomLabel(
         text: String,
         textColor: UIColor,
         font: String,
@@ -30,7 +30,7 @@ extension UIViewController {
     }
 
     /// создает кастомный imageview
-    func makeCustomImageView(image: String, tintColor: UIColor) -> UIImageView {
+    func makeNewCustomImageView(image: String, tintColor: UIColor) -> UIImageView {
         let imageView = UIImageView()
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.image = UIImage(named: image)
@@ -39,7 +39,7 @@ extension UIViewController {
     }
 
     /// создает кастомный textfield
-    func makeCustomTextField(yAnchor: CGFloat) -> UITextField {
+    func makeNewCustomTextField(yAnchor: CGFloat) -> UITextField {
         let textField = UITextField()
         view.addSubview(textField)
         textField.translatesAutoresizingMaskIntoConstraints = false
@@ -56,7 +56,7 @@ extension UIViewController {
     }
 
     /// создает кастомную кнопку
-    func makeCustomButton(text: String) -> UIButton {
+    func makeNewCustomButton(text: String) -> UIButton {
         let button = UIButton()
         view.addSubview(button)
         button.translatesAutoresizingMaskIntoConstraints = false

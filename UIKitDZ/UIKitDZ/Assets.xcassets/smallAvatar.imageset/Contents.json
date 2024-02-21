@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "smallAvatar.pdf",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

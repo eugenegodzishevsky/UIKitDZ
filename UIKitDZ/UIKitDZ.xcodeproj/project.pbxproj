@@ -22,6 +22,9 @@
 		DAA9DF362B84F47D009E325A /* RecommendedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA9DF352B84F47D009E325A /* RecommendedCell.swift */; };
 		DAA9DF382B84F4CE009E325A /* PostsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA9DF372B84F4CE009E325A /* PostsCell.swift */; };
 		DAA9DF3A2B85C162009E325A /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA9DF392B85C162009E325A /* Model.swift */; };
+		DAA9DF3C2B85D0F0009E325A /* CommentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA9DF3B2B85D0F0009E325A /* CommentCell.swift */; };
+		DAA9DF3E2B85D4EE009E325A /* SubscribeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA9DF3D2B85D4EE009E325A /* SubscribeCell.swift */; };
+		DAA9DF422B87270E009E325A /* CellTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA9DF412B87270E009E325A /* CellTypes.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +45,9 @@
 		DAA9DF352B84F47D009E325A /* RecommendedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendedCell.swift; sourceTree = "<group>"; };
 		DAA9DF372B84F4CE009E325A /* PostsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsCell.swift; sourceTree = "<group>"; };
 		DAA9DF392B85C162009E325A /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		DAA9DF3B2B85D0F0009E325A /* CommentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentCell.swift; sourceTree = "<group>"; };
+		DAA9DF3D2B85D4EE009E325A /* SubscribeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscribeCell.swift; sourceTree = "<group>"; };
+		DAA9DF412B87270E009E325A /* CellTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellTypes.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,13 +82,8 @@
 			children = (
 				DAA417DA2B7146B400CF714D /* AppDelegate.swift */,
 				DAA417DC2B7146B400CF714D /* SceneDelegate.swift */,
-				DAA417DE2B7146B400CF714D /* HomeViewController.swift */,
-				DAA9DF392B85C162009E325A /* Model.swift */,
-				DAA9DF312B845731009E325A /* StoriesCell.swift */,
-				DAA9DF332B84F45A009E325A /* NewPostCell.swift */,
-				DAA9DF352B84F47D009E325A /* RecommendedCell.swift */,
-				DAA9DF372B84F4CE009E325A /* PostsCell.swift */,
-				DAA9DF2D2B842D71009E325A /* NotificationsViewController.swift */,
+				DAA9DF402B86DD5A009E325A /* Feed */,
+				DAA9DF3F2B86DD3D009E325A /* Notification */,
 				DAA9DF2F2B842DB4009E325A /* ProfileViewController.swift */,
 				DAA9DF292B84268D009E325A /* TabBarController.swift */,
 				DAA417E02B7146B400CF714D /* Main.storyboard */,
@@ -92,6 +93,30 @@
 				DAA417E82B7146B600CF714D /* Info.plist */,
 			);
 			path = UIKitDZ;
+			sourceTree = "<group>";
+		};
+		DAA9DF3F2B86DD3D009E325A /* Notification */ = {
+			isa = PBXGroup;
+			children = (
+				DAA9DF412B87270E009E325A /* CellTypes.swift */,
+				DAA9DF2D2B842D71009E325A /* NotificationsViewController.swift */,
+				DAA9DF3B2B85D0F0009E325A /* CommentCell.swift */,
+				DAA9DF3D2B85D4EE009E325A /* SubscribeCell.swift */,
+			);
+			path = Notification;
+			sourceTree = "<group>";
+		};
+		DAA9DF402B86DD5A009E325A /* Feed */ = {
+			isa = PBXGroup;
+			children = (
+				DAA417DE2B7146B400CF714D /* HomeViewController.swift */,
+				DAA9DF392B85C162009E325A /* Model.swift */,
+				DAA9DF312B845731009E325A /* StoriesCell.swift */,
+				DAA9DF332B84F45A009E325A /* NewPostCell.swift */,
+				DAA9DF352B84F47D009E325A /* RecommendedCell.swift */,
+				DAA9DF372B84F4CE009E325A /* PostsCell.swift */,
+			);
+			path = Feed;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -212,12 +237,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				DAA9DF302B842DB4009E325A /* ProfileViewController.swift in Sources */,
+				DAA9DF3E2B85D4EE009E325A /* SubscribeCell.swift in Sources */,
 				DAA9DF382B84F4CE009E325A /* PostsCell.swift in Sources */,
 				DAA9DF2E2B842D71009E325A /* NotificationsViewController.swift in Sources */,
 				DAA417DF2B7146B400CF714D /* HomeViewController.swift in Sources */,
+				DAA9DF3C2B85D0F0009E325A /* CommentCell.swift in Sources */,
 				DAA9DF2A2B84268D009E325A /* TabBarController.swift in Sources */,
 				DAA9DF342B84F45A009E325A /* NewPostCell.swift in Sources */,
 				DAA417DB2B7146B400CF714D /* AppDelegate.swift in Sources */,
+				DAA9DF422B87270E009E325A /* CellTypes.swift in Sources */,
 				DAA417DD2B7146B400CF714D /* SceneDelegate.swift in Sources */,
 				DAA9DF3A2B85C162009E325A /* Model.swift in Sources */,
 				DAA9DF362B84F47D009E325A /* RecommendedCell.swift in Sources */,

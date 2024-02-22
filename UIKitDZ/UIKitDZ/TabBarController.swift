@@ -5,17 +5,17 @@ import UIKit
 
 /// Инициализирует  все контроллеры для таб бара
 class MainTabBarController: UITabBarController {
-//    enum Constants {
-//        static let homeTabBarName = "Лента"
-//        static let notificationsTabBarName = "Уведомления"
-//        static let profileTabBarName = "Профиль"
-//        static let homeTabBarImage = "home"
-//        static let notificationsTabBarImage = "notifications"
-//        static let profileTabBarImage = "profile"
-//        static let blueColor = "myBlue"
-//        static let verdana = "Verdana"
-//        static let verdanaBold = "Verdana-Bold"
-//    }
+    private enum Constants {
+        static let homeTabBarName = "Лента"
+        static let notificationsTabBarName = "Уведомления"
+        static let profileTabBarName = "Профиль"
+        static let homeTabBarImage = "home"
+        static let notificationsTabBarImage = "notifications"
+        static let profileTabBarImage = "profile"
+        static let blueColor = "myBlue"
+        static let verdana = "Verdana"
+        static let verdanaBold = "Verdana-Bold"
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()

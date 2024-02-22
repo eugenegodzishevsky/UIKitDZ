@@ -97,7 +97,7 @@ extension HomeViewController: UITableViewDataSource {
                 for: indexPath
             ) as? StoriesCell
             else { return UITableViewCell() }
-            cell.setupCell(stories: rmLinkStorage.stories)
+            cell.setupCell(with: rmLinkStorage.stories)
             return cell
         case .firstPost:
             guard let cell = tableView.dequeueReusableCell(

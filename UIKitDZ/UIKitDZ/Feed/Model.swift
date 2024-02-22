@@ -38,6 +38,8 @@ enum Constants {
     static let smallAvatar = "smallAvatar"
     static let comment = "Комментировать ..."
     static let tenMinutes = "10 минут назад ..."
+    static let xOffset = 20
+    static let increaseXOffset = 80
 }
 
 /// типы строк с постами
@@ -62,7 +64,7 @@ struct Post {
 struct Stories {
     let avatarImageName: String
     let nameLabel: String
-    let addImageName: String?
+    let addButton: Bool
 }
 
 /// модель
@@ -71,16 +73,17 @@ struct RMLinkStorage {
         .init(
             avatarImageName: Constants.firstAvatarName,
             nameLabel: Constants.firstNameLabel,
-            addImageName: Constants.addStoryLabel
+            addButton:
+            true
         ),
-        .init(avatarImageName: Constants.secondAvatarName, nameLabel: Constants.secondNameLabel, addImageName: nil),
-        .init(avatarImageName: Constants.secondAvatarName, nameLabel: Constants.secondNameLabel, addImageName: nil),
-        .init(avatarImageName: Constants.secondAvatarName, nameLabel: Constants.secondNameLabel, addImageName: nil),
-        .init(avatarImageName: Constants.secondAvatarName, nameLabel: Constants.secondNameLabel, addImageName: nil),
-        .init(avatarImageName: Constants.secondAvatarName, nameLabel: Constants.secondNameLabel, addImageName: nil),
-        .init(avatarImageName: Constants.secondAvatarName, nameLabel: Constants.secondNameLabel, addImageName: nil),
-        .init(avatarImageName: Constants.secondAvatarName, nameLabel: Constants.secondNameLabel, addImageName: nil),
-        .init(avatarImageName: Constants.secondAvatarName, nameLabel: Constants.secondNameLabel, addImageName: nil),
+        .init(avatarImageName: Constants.secondAvatarName, nameLabel: Constants.secondNameLabel, addButton: false),
+        .init(avatarImageName: Constants.secondAvatarName, nameLabel: Constants.secondNameLabel, addButton: false),
+        .init(avatarImageName: Constants.secondAvatarName, nameLabel: Constants.secondNameLabel, addButton: false),
+        .init(avatarImageName: Constants.secondAvatarName, nameLabel: Constants.secondNameLabel, addButton: false),
+        .init(avatarImageName: Constants.secondAvatarName, nameLabel: Constants.secondNameLabel, addButton: false),
+        .init(avatarImageName: Constants.secondAvatarName, nameLabel: Constants.secondNameLabel, addButton: false),
+        .init(avatarImageName: Constants.secondAvatarName, nameLabel: Constants.secondNameLabel, addButton: false),
+        .init(avatarImageName: Constants.secondAvatarName, nameLabel: Constants.secondNameLabel, addButton: false),
     ]
 
     let posts: [Post] = [.init(

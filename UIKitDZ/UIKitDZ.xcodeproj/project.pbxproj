@@ -20,11 +20,13 @@
 		DAA9DF322B845731009E325A /* StoriesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA9DF312B845731009E325A /* StoriesCell.swift */; };
 		DAA9DF342B84F45A009E325A /* NewPostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA9DF332B84F45A009E325A /* NewPostCell.swift */; };
 		DAA9DF362B84F47D009E325A /* RecommendedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA9DF352B84F47D009E325A /* RecommendedCell.swift */; };
-		DAA9DF382B84F4CE009E325A /* PostsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA9DF372B84F4CE009E325A /* PostsCell.swift */; };
-		DAA9DF3A2B85C162009E325A /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA9DF392B85C162009E325A /* Model.swift */; };
 		DAA9DF3C2B85D0F0009E325A /* CommentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA9DF3B2B85D0F0009E325A /* CommentCell.swift */; };
 		DAA9DF3E2B85D4EE009E325A /* SubscribeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA9DF3D2B85D4EE009E325A /* SubscribeCell.swift */; };
-		DAA9DF422B87270E009E325A /* CellTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA9DF412B87270E009E325A /* CellTypes.swift */; };
+		DAA9DF422B87270E009E325A /* NotificationCellTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA9DF412B87270E009E325A /* NotificationCellTypes.swift */; };
+		DAA9DF442B879F0C009E325A /* CellTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA9DF432B879F0C009E325A /* CellTypes.swift */; };
+		DAA9DF462B87A00C009E325A /* StiriesType.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA9DF452B87A00C009E325A /* StiriesType.swift */; };
+		DAA9DF482B87A16D009E325A /* PostType.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA9DF472B87A16D009E325A /* PostType.swift */; };
+		DAA9DF4A2B87A591009E325A /* RecommendedType.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA9DF492B87A591009E325A /* RecommendedType.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,11 +45,13 @@
 		DAA9DF312B845731009E325A /* StoriesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoriesCell.swift; sourceTree = "<group>"; };
 		DAA9DF332B84F45A009E325A /* NewPostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPostCell.swift; sourceTree = "<group>"; };
 		DAA9DF352B84F47D009E325A /* RecommendedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendedCell.swift; sourceTree = "<group>"; };
-		DAA9DF372B84F4CE009E325A /* PostsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsCell.swift; sourceTree = "<group>"; };
-		DAA9DF392B85C162009E325A /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		DAA9DF3B2B85D0F0009E325A /* CommentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentCell.swift; sourceTree = "<group>"; };
 		DAA9DF3D2B85D4EE009E325A /* SubscribeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscribeCell.swift; sourceTree = "<group>"; };
-		DAA9DF412B87270E009E325A /* CellTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellTypes.swift; sourceTree = "<group>"; };
+		DAA9DF412B87270E009E325A /* NotificationCellTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationCellTypes.swift; sourceTree = "<group>"; };
+		DAA9DF432B879F0C009E325A /* CellTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellTypes.swift; sourceTree = "<group>"; };
+		DAA9DF452B87A00C009E325A /* StiriesType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StiriesType.swift; sourceTree = "<group>"; };
+		DAA9DF472B87A16D009E325A /* PostType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostType.swift; sourceTree = "<group>"; };
+		DAA9DF492B87A591009E325A /* RecommendedType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendedType.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,7 +102,7 @@
 		DAA9DF3F2B86DD3D009E325A /* Notification */ = {
 			isa = PBXGroup;
 			children = (
-				DAA9DF412B87270E009E325A /* CellTypes.swift */,
+				DAA9DF412B87270E009E325A /* NotificationCellTypes.swift */,
 				DAA9DF2D2B842D71009E325A /* NotificationsViewController.swift */,
 				DAA9DF3B2B85D0F0009E325A /* CommentCell.swift */,
 				DAA9DF3D2B85D4EE009E325A /* SubscribeCell.swift */,
@@ -110,11 +114,13 @@
 			isa = PBXGroup;
 			children = (
 				DAA417DE2B7146B400CF714D /* HomeViewController.swift */,
-				DAA9DF392B85C162009E325A /* Model.swift */,
+				DAA9DF432B879F0C009E325A /* CellTypes.swift */,
+				DAA9DF452B87A00C009E325A /* StiriesType.swift */,
 				DAA9DF312B845731009E325A /* StoriesCell.swift */,
+				DAA9DF472B87A16D009E325A /* PostType.swift */,
 				DAA9DF332B84F45A009E325A /* NewPostCell.swift */,
+				DAA9DF492B87A591009E325A /* RecommendedType.swift */,
 				DAA9DF352B84F47D009E325A /* RecommendedCell.swift */,
-				DAA9DF372B84F4CE009E325A /* PostsCell.swift */,
 			);
 			path = Feed;
 			sourceTree = "<group>";
@@ -236,18 +242,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DAA9DF442B879F0C009E325A /* CellTypes.swift in Sources */,
+				DAA9DF462B87A00C009E325A /* StiriesType.swift in Sources */,
 				DAA9DF302B842DB4009E325A /* ProfileViewController.swift in Sources */,
+				DAA9DF4A2B87A591009E325A /* RecommendedType.swift in Sources */,
 				DAA9DF3E2B85D4EE009E325A /* SubscribeCell.swift in Sources */,
-				DAA9DF382B84F4CE009E325A /* PostsCell.swift in Sources */,
 				DAA9DF2E2B842D71009E325A /* NotificationsViewController.swift in Sources */,
 				DAA417DF2B7146B400CF714D /* HomeViewController.swift in Sources */,
 				DAA9DF3C2B85D0F0009E325A /* CommentCell.swift in Sources */,
 				DAA9DF2A2B84268D009E325A /* TabBarController.swift in Sources */,
 				DAA9DF342B84F45A009E325A /* NewPostCell.swift in Sources */,
 				DAA417DB2B7146B400CF714D /* AppDelegate.swift in Sources */,
-				DAA9DF422B87270E009E325A /* CellTypes.swift in Sources */,
+				DAA9DF422B87270E009E325A /* NotificationCellTypes.swift in Sources */,
+				DAA9DF482B87A16D009E325A /* PostType.swift in Sources */,
 				DAA417DD2B7146B400CF714D /* SceneDelegate.swift in Sources */,
-				DAA9DF3A2B85C162009E325A /* Model.swift in Sources */,
 				DAA9DF362B84F47D009E325A /* RecommendedCell.swift in Sources */,
 				DAA9DF322B845731009E325A /* StoriesCell.swift in Sources */,
 			);

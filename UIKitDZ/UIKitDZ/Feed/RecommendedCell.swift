@@ -5,250 +5,136 @@ import UIKit
 
 /// ячейка рекомендованное
 class RecommendedCell: UITableViewCell {
+    // MARK: - Constants
+
     private enum Constants {
-        static let recommendedCell = "RecommendedCell"
-        static let myLightBlue = "myLightBlue"
-        static let recommended = "Рекомендуем вам"
-        static let all = "Все"
-        static let account = "account"
-        static let verdanaBold = "Verdana-bold"
-        static let verdana = "Verdana"
-        static let close = "close"
-        static let crimea = "сrimea_082"
-        static let subscribe = "subscribe"
-        static let subscribeRus = "Подписаться"
-        static let accountFirst = "account1"
-        static let accountMary = "mary_pol"
-        static let errorMessage = "init(coder:) has not been implemented"
+        static let xOffset = 20
+        static let increaseXOffset = 210
+        static let fontVerdana = "Verdana"
+        static let fontVerdanaBold = "Verdana-Bold"
+        static let recomindationLabelText = "Рекомендуем вам"
+        static let buttonTitle = "Все"
+        static let subscribeButton = "Подписаться"
     }
 
-    static let identifier = Constants.recommendedCell
-    let scrollView = UIScrollView()
+    // MARK: - Visual Components
 
-    private var recommendedView: UIView = {
-        let view = UIView()
-        view.translatesAutoresizingMaskIntoConstraints = false
-        view.backgroundColor = UIColor(named: Constants.myLightBlue)
-        return view
+    private var scrollView: UIScrollView = {
+        let scrollView = UIScrollView()
+        scrollView.backgroundColor = UIColor(red: 210 / 255, green: 223 / 255, blue: 238 / 255, alpha: 1.0)
+        scrollView.showsHorizontalScrollIndicator = false
+        scrollView.translatesAutoresizingMaskIntoConstraints = false
+        return scrollView
     }()
 
-    private let recommendationLabel: UILabel = {
+    private let recomindationLabel: UILabel = {
         let label = UILabel()
+        label.text = Constants.recomindationLabelText
+        label.textColor = .black
+        label.font = UIFont(name: Constants.fontVerdanaBold, size: 10)
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.text = Constants.recommended
-        label.font = UIFont(name: Constants.verdanaBold, size: 10)
         return label
     }()
 
-    private let allRecommendationLabel: UILabel = {
-        let label = UILabel()
-        label.translatesAutoresizingMaskIntoConstraints = false
-        label.text = Constants.all
-        label.textAlignment = .right
-        label.textColor = .systemBlue
-        label.font = UIFont(name: Constants.verdanaBold, size: 10)
-        return label
-    }()
-
-    // вью нового аакаунта
-    private var accountView: UIView = {
-        let view = UIView()
-        view.translatesAutoresizingMaskIntoConstraints = false
-        view.backgroundColor = .white
-        return view
-    }()
-
-    private var accountImageView: UIImageView = {
-        let image = UIImageView()
-        image.translatesAutoresizingMaskIntoConstraints = false
-        image.image = UIImage(named: Constants.account)
-        return image
-    }()
-
-    private let closeButton: UIButton = {
+    private let recomindationButton: UIButton = {
         let button = UIButton()
-        button.setImage(UIImage(named: Constants.close), for: .normal)
+        button.setTitle(Constants.buttonTitle, for: .normal)
+        button.setTitleColor(UIColor(red: 0 / 255, green: 122 / 255, blue: 255 / 255, alpha: 1.0), for: .normal)
+        button.titleLabel?.font = UIFont(name: Constants.fontVerdanaBold, size: 10)
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
 
-    private let nameLabel: UILabel = {
-        let label = UILabel()
-        label.translatesAutoresizingMaskIntoConstraints = false
-        label.text = Constants.crimea
-        label.textAlignment = .center
-        label.font = UIFont(name: Constants.verdana, size: 10)
-        return label
-    }()
-
-    private let subscribeButton: UIButton = {
-        let button = UIButton()
-        button.setImage(UIImage(named: Constants.subscribe), for: .normal)
-        button.translatesAutoresizingMaskIntoConstraints = false
-        return button
-    }()
-
-    private let subscribeLabel: UILabel = {
-        let label = UILabel()
-        label.translatesAutoresizingMaskIntoConstraints = false
-        label.text = Constants.subscribeRus
-        label.textAlignment = .center
-        label.textColor = .white
-        label.font = UIFont(name: Constants.verdanaBold, size: 10)
-        return label
-    }()
-
-    // вторая вью
-    private var accountView1: UIView = {
-        let view = UIView()
-        view.translatesAutoresizingMaskIntoConstraints = false
-        view.backgroundColor = .white
-        return view
-    }()
-
-    private var accountImageView1: UIImageView = {
-        let image = UIImageView()
-        image.translatesAutoresizingMaskIntoConstraints = false
-        image.image = UIImage(named: Constants.accountFirst)
-        return image
-    }()
-
-    private let closeButton1: UIButton = {
-        let button = UIButton()
-        button.setImage(UIImage(named: Constants.close), for: .normal)
-        button.translatesAutoresizingMaskIntoConstraints = false
-        return button
-    }()
-
-    private let nameLabel1: UILabel = {
-        let label = UILabel()
-        label.translatesAutoresizingMaskIntoConstraints = false
-        label.text = Constants.accountMary
-        label.textAlignment = .center
-        label.font = UIFont(name: Constants.verdana, size: 10)
-        return label
-    }()
-
-    private let subscribeButton1: UIButton = {
-        let button = UIButton()
-        button.setImage(UIImage(named: Constants.subscribe), for: .normal)
-        button.translatesAutoresizingMaskIntoConstraints = false
-        return button
-    }()
-
-    private let subscribeLabel1: UILabel = {
-        let label = UILabel()
-        label.translatesAutoresizingMaskIntoConstraints = false
-        label.text = Constants.subscribeRus
-        label.textAlignment = .center
-        label.textColor = .white
-        label.font = UIFont(name: Constants.verdanaBold, size: 10)
-        return label
-    }()
+    // MARK: - Initializers
 
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
+        addViews()
+        setupConstraints()
     }
 
-    @available(*, unavailable)
-    required init?(coder: NSCoder) {
-        fatalError(Constants.errorMessage)
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        addViews()
+        setupConstraints()
     }
 
-    func setupCell() {
-        contentView.addSubview(recommendedView)
-        recommendedView.addSubview(recommendationLabel)
-        recommendedView.addSubview(allRecommendationLabel)
-        recommendedView.addSubview(scrollView)
-        // пкрвая вью в предложке
-        scrollView.translatesAutoresizingMaskIntoConstraints = false
-        // scrollView.backgroundColor = .red
-        scrollView.addSubview(accountView)
-        accountView.addSubview(accountImageView)
-        accountView.addSubview(closeButton)
-        accountView.addSubview(nameLabel)
-        accountView.addSubview(subscribeButton)
-        accountView.addSubview(subscribeLabel)
-        // вторая вью в предложке
-        scrollView.addSubview(accountView1)
-        accountView1.addSubview(accountImageView1)
-        accountView1.addSubview(closeButton1)
-        accountView1.addSubview(nameLabel1)
-        accountView1.addSubview(subscribeButton1)
-        accountView1.addSubview(subscribeLabel1)
+    // MARK: - Private Methods
 
-        NSLayoutConstraint.activate([
-            recommendedView.topAnchor.constraint(equalTo: topAnchor),
-            recommendedView.leadingAnchor.constraint(equalTo: leadingAnchor),
-            recommendedView.trailingAnchor.constraint(equalTo: trailingAnchor),
-            recommendedView.bottomAnchor.constraint(equalTo: bottomAnchor),
+    private func addViews() {
+        contentView.addSubview(scrollView)
+        contentView.addSubview(recomindationLabel)
+        contentView.addSubview(recomindationButton)
+    }
 
-            scrollView.topAnchor.constraint(equalTo: recommendedView.topAnchor, constant: 45),
-            scrollView.leadingAnchor.constraint(equalTo: recommendedView.leadingAnchor, constant: 16),
-            scrollView.trailingAnchor.constraint(equalTo: recommendedView.trailingAnchor, constant: 16),
-            scrollView.bottomAnchor.constraint(equalTo: recommendedView.bottomAnchor, constant: -25),
+    private func setupConstraints() {
+        scrollView.topAnchor.constraint(equalTo: contentView.topAnchor).isActive = true
+        scrollView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor).isActive = true
+        scrollView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor).isActive = true
+        scrollView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor).isActive = true
 
-            recommendationLabel.topAnchor.constraint(equalTo: recommendedView.topAnchor, constant: 9),
-            recommendationLabel.leadingAnchor.constraint(equalTo: recommendedView.leadingAnchor, constant: 12),
+        recomindationLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 12)
+            .isActive = true
+        recomindationLabel.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 9).isActive = true
 
-            allRecommendationLabel.topAnchor.constraint(equalTo: recommendedView.topAnchor, constant: 9),
-            allRecommendationLabel.leadingAnchor.constraint(equalTo: recommendedView.leadingAnchor, constant: 258),
-            allRecommendationLabel.widthAnchor.constraint(equalToConstant: 107),
-            // первая лайба контакта
-            accountView.topAnchor.constraint(equalTo: scrollView.topAnchor),
-            accountView.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor),
-            accountView.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor),
-            accountView.widthAnchor.constraint(equalToConstant: 185),
-            accountView.heightAnchor.constraint(equalToConstant: 200),
+        recomindationButton.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 2).isActive = true
+        recomindationButton.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -10)
+            .isActive = true
+    }
 
-            accountImageView.topAnchor.constraint(equalTo: accountView.topAnchor, constant: 15),
-            accountImageView.leadingAnchor.constraint(equalTo: accountView.leadingAnchor, constant: 35),
-            accountImageView.widthAnchor.constraint(equalToConstant: 115),
-            accountImageView.heightAnchor.constraint(equalToConstant: 115),
+    // MARK: - Public Methods
 
-            closeButton.topAnchor.constraint(equalTo: accountView.topAnchor, constant: 6),
-            closeButton.leadingAnchor.constraint(equalTo: accountView.leadingAnchor, constant: 167),
+    func configure(with items: [Recommended]) {
+        var xOffset = CGFloat(Constants.xOffset)
 
-            nameLabel.topAnchor.constraint(equalTo: accountImageView.bottomAnchor, constant: 5),
-            nameLabel.leadingAnchor.constraint(equalTo: accountView.leadingAnchor, constant: 42),
-            nameLabel.widthAnchor.constraint(equalToConstant: 100),
+        for item in items {
+            let uiView = UIView()
+            uiView.backgroundColor = .white
+            uiView.translatesAutoresizingMaskIntoConstraints = false
+            scrollView.addSubview(uiView)
 
-            subscribeButton.topAnchor.constraint(equalTo: nameLabel.bottomAnchor, constant: 9),
-            subscribeButton.leadingAnchor.constraint(equalTo: accountView.leadingAnchor, constant: 10),
-            subscribeButton.widthAnchor.constraint(equalToConstant: 165),
+            let imageview = UIImageView()
+            imageview.image = UIImage(named: item.imageName)
+            imageview.contentMode = .scaleAspectFill
+            imageview.clipsToBounds = true
+            imageview.layer.cornerRadius = 57.5
+            imageview.translatesAutoresizingMaskIntoConstraints = false
+            scrollView.addSubview(imageview)
 
-            subscribeLabel.topAnchor.constraint(equalTo: subscribeButton.topAnchor, constant: 9),
-            subscribeLabel.leadingAnchor.constraint(equalTo: subscribeButton.leadingAnchor, constant: 45),
-            subscribeLabel.widthAnchor.constraint(equalToConstant: 74),
-            // вторая лайба контакта
+            let label = UILabel()
+            label.text = item.label
+            label.textColor = .black
+            label.font = UIFont(name: Constants.fontVerdana, size: 10)
+            label.translatesAutoresizingMaskIntoConstraints = false
+            scrollView.addSubview(label)
 
-            accountView1.topAnchor.constraint(equalTo: scrollView.topAnchor),
-            accountView1.leadingAnchor.constraint(equalTo: accountView.trailingAnchor, constant: 20),
-            accountView1.trailingAnchor.constraint(equalTo: scrollView.trailingAnchor),
-            accountView1.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor),
-            accountView1.widthAnchor.constraint(equalToConstant: 185),
-            accountView1.heightAnchor.constraint(equalToConstant: 200),
+            let button = UIButton()
+            button.setTitle(Constants.subscribeButton, for: .normal)
+            button.backgroundColor = UIColor(red: 0 / 255, green: 122 / 255, blue: 255 / 255, alpha: 1.0)
+            button.layer.cornerRadius = 8
+            button.titleLabel?.font = UIFont(name: Constants.fontVerdanaBold, size: 10)
+            button.translatesAutoresizingMaskIntoConstraints = false
+            scrollView.addSubview(button)
 
-            accountImageView1.topAnchor.constraint(equalTo: accountView1.topAnchor, constant: 15),
-            accountImageView1.leadingAnchor.constraint(equalTo: accountView1.leadingAnchor, constant: 35),
-            accountImageView1.widthAnchor.constraint(equalToConstant: 115),
-            accountImageView1.heightAnchor.constraint(equalToConstant: 115),
+            uiView.widthAnchor.constraint(equalToConstant: 185).isActive = true
+            uiView.heightAnchor.constraint(equalToConstant: 200).isActive = true
+            uiView.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor, constant: xOffset).isActive = true
+            uiView.topAnchor.constraint(equalTo: scrollView.topAnchor, constant: 45).isActive = true
 
-            closeButton1.topAnchor.constraint(equalTo: accountView1.topAnchor, constant: 6),
-            closeButton1.leadingAnchor.constraint(equalTo: accountView1.leadingAnchor, constant: 167),
+            imageview.widthAnchor.constraint(equalToConstant: 115).isActive = true
+            imageview.heightAnchor.constraint(equalToConstant: 115).isActive = true
+            imageview.topAnchor.constraint(equalTo: uiView.topAnchor, constant: 15).isActive = true
+            imageview.centerXAnchor.constraint(equalTo: uiView.centerXAnchor).isActive = true
 
-            nameLabel1.topAnchor.constraint(equalTo: accountImageView1.bottomAnchor, constant: 5),
-            nameLabel1.leadingAnchor.constraint(equalTo: accountView1.leadingAnchor, constant: 42),
-            nameLabel1.widthAnchor.constraint(equalToConstant: 100),
+            label.topAnchor.constraint(equalTo: imageview.bottomAnchor, constant: 5).isActive = true
+            label.centerXAnchor.constraint(equalTo: uiView.centerXAnchor).isActive = true
 
-            subscribeButton1.topAnchor.constraint(equalTo: nameLabel1.bottomAnchor, constant: 9),
-            subscribeButton1.leadingAnchor.constraint(equalTo: accountView1.leadingAnchor, constant: 10),
-            subscribeButton1.widthAnchor.constraint(equalToConstant: 165),
+            button.bottomAnchor.constraint(equalTo: uiView.bottomAnchor, constant: -15).isActive = true
+            button.centerXAnchor.constraint(equalTo: uiView.centerXAnchor).isActive = true
+            button.widthAnchor.constraint(equalToConstant: 165).isActive = true
 
-            subscribeLabel1.topAnchor.constraint(equalTo: subscribeButton1.topAnchor, constant: 9),
-            subscribeLabel1.leadingAnchor.constraint(equalTo: subscribeButton1.leadingAnchor, constant: 45),
-            subscribeLabel1.widthAnchor.constraint(equalToConstant: 74),
-
-        ])
+            xOffset += CGFloat(Constants.increaseXOffset)
+        }
+        scrollView.contentSize = CGSize(width: xOffset, height: 100)
     }
 }

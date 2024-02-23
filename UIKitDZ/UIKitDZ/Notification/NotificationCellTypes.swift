@@ -5,19 +5,8 @@ import Foundation
 
 /// коментарий или предложка подписаться
 enum CellNotificationType {
+    // комент без кнопки
     case comment([CommentItemCell])
+    // комент с кнопкой
     case subscribe([SubscribeItemCell])
-}
-
-/// комент с кнопкой
-struct SubscribeItemCell {
-    let imageUserName: String
-    let userComment: String
-}
-
-/// комент простой
-struct CommentItemCell {
-    var userImageName: String
-    var userText: String
-    var imageName: String
 }

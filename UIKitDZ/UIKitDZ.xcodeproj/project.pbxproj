@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DA5E0B962B889BB1003EA9B7 /* SubscribeCellType.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5E0B952B889BB1003EA9B7 /* SubscribeCellType.swift */; };
+		DA5E0B982B889BC6003EA9B7 /* CommentCellType.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5E0B972B889BC6003EA9B7 /* CommentCellType.swift */; };
 		DAA417DB2B7146B400CF714D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA417DA2B7146B400CF714D /* AppDelegate.swift */; };
 		DAA417DD2B7146B400CF714D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA417DC2B7146B400CF714D /* SceneDelegate.swift */; };
 		DAA417DF2B7146B400CF714D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA417DE2B7146B400CF714D /* HomeViewController.swift */; };
@@ -30,6 +32,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DA5E0B952B889BB1003EA9B7 /* SubscribeCellType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscribeCellType.swift; sourceTree = "<group>"; };
+		DA5E0B972B889BC6003EA9B7 /* CommentCellType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentCellType.swift; sourceTree = "<group>"; };
 		DAA417D72B7146B400CF714D /* UIKitDZ.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UIKitDZ.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAA417DA2B7146B400CF714D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DAA417DC2B7146B400CF714D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -103,6 +107,8 @@
 			isa = PBXGroup;
 			children = (
 				DAA9DF412B87270E009E325A /* NotificationCellTypes.swift */,
+				DA5E0B952B889BB1003EA9B7 /* SubscribeCellType.swift */,
+				DA5E0B972B889BC6003EA9B7 /* CommentCellType.swift */,
 				DAA9DF2D2B842D71009E325A /* NotificationsViewController.swift */,
 				DAA9DF3B2B85D0F0009E325A /* CommentCell.swift */,
 				DAA9DF3D2B85D4EE009E325A /* SubscribeCell.swift */,
@@ -243,11 +249,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				DAA9DF442B879F0C009E325A /* CellTypes.swift in Sources */,
+				DA5E0B962B889BB1003EA9B7 /* SubscribeCellType.swift in Sources */,
 				DAA9DF462B87A00C009E325A /* StiriesType.swift in Sources */,
 				DAA9DF302B842DB4009E325A /* ProfileViewController.swift in Sources */,
 				DAA9DF4A2B87A591009E325A /* RecommendedType.swift in Sources */,
 				DAA9DF3E2B85D4EE009E325A /* SubscribeCell.swift in Sources */,
 				DAA9DF2E2B842D71009E325A /* NotificationsViewController.swift in Sources */,
+				DA5E0B982B889BC6003EA9B7 /* CommentCellType.swift in Sources */,
 				DAA417DF2B7146B400CF714D /* HomeViewController.swift in Sources */,
 				DAA9DF3C2B85D0F0009E325A /* CommentCell.swift in Sources */,
 				DAA9DF2A2B84268D009E325A /* TabBarController.swift in Sources */,

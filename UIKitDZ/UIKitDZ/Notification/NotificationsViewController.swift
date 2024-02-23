@@ -4,7 +4,7 @@
 import UIKit
 
 /// экран уведомлений
-class NotificationsViewController: UIViewController {
+final class NotificationsViewController: UIViewController {
     // MARK: - Constants
 
     private enum Constants {
@@ -19,6 +19,7 @@ class NotificationsViewController: UIViewController {
             "markS появился(-ась) в RMLink. Вы можете быть знакомы 8д.",
             "sv_neit появился(-ась) в RMLink. Вы можете быть знакомы 8д."
         ]
+
         static let navigationItemText = "Уведомления"
         static let picName = "pic"
         static let picNameSecond = "pic2"
@@ -94,10 +95,14 @@ class NotificationsViewController: UIViewController {
         ])
     ]
 
+    // MARK: - Life Cycle
+
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
     }
+
+    // MARK: - Private Methods
 
     private func setupUI() {
         view.backgroundColor = .white

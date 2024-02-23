@@ -4,7 +4,7 @@
 import UIKit
 
 /// ячейка новый пост
-class NewPostCell: UITableViewCell {
+final class NewPostCell: UITableViewCell {
     // MARK: - Constants
 
     private enum Constants {

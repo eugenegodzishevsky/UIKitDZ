@@ -4,7 +4,7 @@
 import UIKit
 
 /// экран ленты
-class HomeViewController: UIViewController {
+final class HomeViewController: UIViewController {
     // MARK: - Constants
 
     private enum Constants {
@@ -163,8 +163,7 @@ extension HomeViewController: UITableViewDelegate {}
 
 extension HomeViewController: UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
-        print(items.count)
-        return items.count
+        items.count
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

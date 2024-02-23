@@ -4,7 +4,7 @@
 import UIKit
 
 /// ячейка рекомендованное
-class RecommendedCell: UITableViewCell {
+final class RecommendedCell: UITableViewCell {
     // MARK: - Constants
 
     private enum Constants {

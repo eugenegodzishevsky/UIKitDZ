@@ -4,12 +4,12 @@
 import UIKit
 
 /// экран профиля
-class ProfileViewController: UIViewController {
+final class ProfileViewController: UIViewController {
+    // MARK: - Life Cycle
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         view.backgroundColor = .white
-
-        print("ViewDidLoadProfile")
     }
 }

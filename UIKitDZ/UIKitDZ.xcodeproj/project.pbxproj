@@ -9,6 +9,12 @@
 /* Begin PBXBuildFile section */
 		DA5E0B962B889BB1003EA9B7 /* SubscribeCellType.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5E0B952B889BB1003EA9B7 /* SubscribeCellType.swift */; };
 		DA5E0B982B889BC6003EA9B7 /* CommentCellType.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5E0B972B889BC6003EA9B7 /* CommentCellType.swift */; };
+		DA5E0B9F2B898A67003EA9B7 /* ProfileCellTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5E0B9E2B898A67003EA9B7 /* ProfileCellTypes.swift */; };
+		DA5E0BA12B898B24003EA9B7 /* ProfileHighlightsCellType.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5E0BA02B898B24003EA9B7 /* ProfileHighlightsCellType.swift */; };
+		DA5E0BA32B898B6E003EA9B7 /* ProfileCellType.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5E0BA22B898B6E003EA9B7 /* ProfileCellType.swift */; };
+		DA5E0BA52B89972B003EA9B7 /* ProfileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5E0BA42B89972B003EA9B7 /* ProfileCell.swift */; };
+		DA5E0BA72B899761003EA9B7 /* ProfileHighlightsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5E0BA62B899761003EA9B7 /* ProfileHighlightsCell.swift */; };
+		DA5E0BA92B8997B7003EA9B7 /* ProfilePhotosCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5E0BA82B8997B7003EA9B7 /* ProfilePhotosCell.swift */; };
 		DAA417DB2B7146B400CF714D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA417DA2B7146B400CF714D /* AppDelegate.swift */; };
 		DAA417DD2B7146B400CF714D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA417DC2B7146B400CF714D /* SceneDelegate.swift */; };
 		DAA417DF2B7146B400CF714D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA417DE2B7146B400CF714D /* HomeViewController.swift */; };
@@ -34,6 +40,12 @@
 /* Begin PBXFileReference section */
 		DA5E0B952B889BB1003EA9B7 /* SubscribeCellType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscribeCellType.swift; sourceTree = "<group>"; };
 		DA5E0B972B889BC6003EA9B7 /* CommentCellType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentCellType.swift; sourceTree = "<group>"; };
+		DA5E0B9E2B898A67003EA9B7 /* ProfileCellTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCellTypes.swift; sourceTree = "<group>"; };
+		DA5E0BA02B898B24003EA9B7 /* ProfileHighlightsCellType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHighlightsCellType.swift; sourceTree = "<group>"; };
+		DA5E0BA22B898B6E003EA9B7 /* ProfileCellType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCellType.swift; sourceTree = "<group>"; };
+		DA5E0BA42B89972B003EA9B7 /* ProfileCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCell.swift; sourceTree = "<group>"; };
+		DA5E0BA62B899761003EA9B7 /* ProfileHighlightsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHighlightsCell.swift; sourceTree = "<group>"; };
+		DA5E0BA82B8997B7003EA9B7 /* ProfilePhotosCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePhotosCell.swift; sourceTree = "<group>"; };
 		DAA417D72B7146B400CF714D /* UIKitDZ.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UIKitDZ.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAA417DA2B7146B400CF714D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DAA417DC2B7146B400CF714D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -69,6 +81,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DA5E0B992B8987A7003EA9B7 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				DAA9DF2F2B842DB4009E325A /* ProfileViewController.swift */,
+				DA5E0B9E2B898A67003EA9B7 /* ProfileCellTypes.swift */,
+				DA5E0BA22B898B6E003EA9B7 /* ProfileCellType.swift */,
+				DA5E0BA42B89972B003EA9B7 /* ProfileCell.swift */,
+				DA5E0BA02B898B24003EA9B7 /* ProfileHighlightsCellType.swift */,
+				DA5E0BA62B899761003EA9B7 /* ProfileHighlightsCell.swift */,
+				DA5E0BA82B8997B7003EA9B7 /* ProfilePhotosCell.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
 		DAA417CE2B7146B400CF714D = {
 			isa = PBXGroup;
 			children = (
@@ -92,7 +118,7 @@
 				DAA417DC2B7146B400CF714D /* SceneDelegate.swift */,
 				DAA9DF402B86DD5A009E325A /* Feed */,
 				DAA9DF3F2B86DD3D009E325A /* Notification */,
-				DAA9DF2F2B842DB4009E325A /* ProfileViewController.swift */,
+				DA5E0B992B8987A7003EA9B7 /* Profile */,
 				DAA9DF292B84268D009E325A /* TabBarController.swift */,
 				DAA417E02B7146B400CF714D /* Main.storyboard */,
 				DAA417E32B7146B600CF714D /* Assets.xcassets */,
@@ -248,11 +274,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA5E0BA92B8997B7003EA9B7 /* ProfilePhotosCell.swift in Sources */,
 				DAA9DF442B879F0C009E325A /* CellTypes.swift in Sources */,
 				DA5E0B962B889BB1003EA9B7 /* SubscribeCellType.swift in Sources */,
+				DA5E0B9F2B898A67003EA9B7 /* ProfileCellTypes.swift in Sources */,
+				DA5E0BA52B89972B003EA9B7 /* ProfileCell.swift in Sources */,
 				DAA9DF462B87A00C009E325A /* StiriesType.swift in Sources */,
 				DAA9DF302B842DB4009E325A /* ProfileViewController.swift in Sources */,
 				DAA9DF4A2B87A591009E325A /* RecommendedType.swift in Sources */,
+				DA5E0BA32B898B6E003EA9B7 /* ProfileCellType.swift in Sources */,
 				DAA9DF3E2B85D4EE009E325A /* SubscribeCell.swift in Sources */,
 				DAA9DF2E2B842D71009E325A /* NotificationsViewController.swift in Sources */,
 				DA5E0B982B889BC6003EA9B7 /* CommentCellType.swift in Sources */,
@@ -260,6 +290,8 @@
 				DAA9DF3C2B85D0F0009E325A /* CommentCell.swift in Sources */,
 				DAA9DF2A2B84268D009E325A /* TabBarController.swift in Sources */,
 				DAA9DF342B84F45A009E325A /* NewPostCell.swift in Sources */,
+				DA5E0BA12B898B24003EA9B7 /* ProfileHighlightsCellType.swift in Sources */,
+				DA5E0BA72B899761003EA9B7 /* ProfileHighlightsCell.swift in Sources */,
 				DAA417DB2B7146B400CF714D /* AppDelegate.swift in Sources */,
 				DAA9DF422B87270E009E325A /* NotificationCellTypes.swift in Sources */,
 				DAA9DF482B87A16D009E325A /* PostType.swift in Sources */,

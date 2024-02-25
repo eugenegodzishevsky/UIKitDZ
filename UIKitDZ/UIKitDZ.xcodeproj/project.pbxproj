@@ -15,6 +15,7 @@
 		DA5E0BA52B89972B003EA9B7 /* ProfileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5E0BA42B89972B003EA9B7 /* ProfileCell.swift */; };
 		DA5E0BA72B899761003EA9B7 /* ProfileHighlightsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5E0BA62B899761003EA9B7 /* ProfileHighlightsCell.swift */; };
 		DA5E0BA92B8997B7003EA9B7 /* ProfilePhotosCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5E0BA82B8997B7003EA9B7 /* ProfilePhotosCell.swift */; };
+		DA9784342B8A3ACD0038036A /* WKWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9784332B8A3ACD0038036A /* WKWebViewController.swift */; };
 		DAA417DB2B7146B400CF714D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA417DA2B7146B400CF714D /* AppDelegate.swift */; };
 		DAA417DD2B7146B400CF714D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA417DC2B7146B400CF714D /* SceneDelegate.swift */; };
 		DAA417DF2B7146B400CF714D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA417DE2B7146B400CF714D /* HomeViewController.swift */; };
@@ -46,6 +47,7 @@
 		DA5E0BA42B89972B003EA9B7 /* ProfileCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCell.swift; sourceTree = "<group>"; };
 		DA5E0BA62B899761003EA9B7 /* ProfileHighlightsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHighlightsCell.swift; sourceTree = "<group>"; };
 		DA5E0BA82B8997B7003EA9B7 /* ProfilePhotosCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePhotosCell.swift; sourceTree = "<group>"; };
+		DA9784332B8A3ACD0038036A /* WKWebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WKWebViewController.swift; sourceTree = "<group>"; };
 		DAA417D72B7146B400CF714D /* UIKitDZ.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UIKitDZ.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAA417DA2B7146B400CF714D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DAA417DC2B7146B400CF714D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -85,6 +87,7 @@
 			isa = PBXGroup;
 			children = (
 				DAA9DF2F2B842DB4009E325A /* ProfileViewController.swift */,
+				DA9784332B8A3ACD0038036A /* WKWebViewController.swift */,
 				DA5E0B9E2B898A67003EA9B7 /* ProfileCellTypes.swift */,
 				DA5E0BA22B898B6E003EA9B7 /* ProfileCellType.swift */,
 				DA5E0BA42B89972B003EA9B7 /* ProfileCell.swift */,
@@ -289,6 +292,7 @@
 				DAA417DF2B7146B400CF714D /* HomeViewController.swift in Sources */,
 				DAA9DF3C2B85D0F0009E325A /* CommentCell.swift in Sources */,
 				DAA9DF2A2B84268D009E325A /* TabBarController.swift in Sources */,
+				DA9784342B8A3ACD0038036A /* WKWebViewController.swift in Sources */,
 				DAA9DF342B84F45A009E325A /* NewPostCell.swift in Sources */,
 				DA5E0BA12B898B24003EA9B7 /* ProfileHighlightsCellType.swift in Sources */,
 				DA5E0BA72B899761003EA9B7 /* ProfileHighlightsCell.swift in Sources */,

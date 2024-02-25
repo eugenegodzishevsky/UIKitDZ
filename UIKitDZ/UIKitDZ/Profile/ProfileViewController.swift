@@ -17,12 +17,13 @@ final class ProfileViewController: UIViewController {
     // MARK: - Private Properties
 
     private let tableView = UITableView()
+    let navigationBar = UINavigationBar()
 
     private let items: [ProfileCellTypes] = [
         .profile(Profile(
-            userImageName: "userImageName",
-            accountName: "Мария Ивановна",
-            accountLabel: "Консультант",
+            userImageName: "story1",
+            accountName: "Мария Иванова",
+            accountLabel: "Консультат",
             link: "www.spacex.com"
         )),
         .highlights([
@@ -30,7 +31,7 @@ final class ProfileViewController: UIViewController {
             Highlights(imageName: "space1", text: "Луна"),
             Highlights(imageName: "space2", text: "Космана..."),
             Highlights(imageName: "space3", text: "Космос"),
-            Highlights(imageName: "space0", text: "Запуск"),
+            Highlights(imageName: "space", text: "Запуск"),
             Highlights(imageName: "space1", text: "Луна")
         ]),
         .photos
@@ -100,7 +101,8 @@ final class ProfileViewController: UIViewController {
         tableView.register(ProfilePhotosCell.self, forCellReuseIdentifier: Constants.profilePhotosCellIdentifire)
         tableView.dataSource = self
         tableView.delegate = self
-//        tableView.separatorColor = .clear
+        tableView.separatorColor = .clear
+
         view.addSubview(tableView)
 
         tableView.translatesAutoresizingMaskIntoConstraints = false
@@ -108,6 +110,11 @@ final class ProfileViewController: UIViewController {
         tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
         tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
         tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
+    }
+
+    private func showWkWebViewController() {
+        let webViewController = WKWebViewController()
+        present(webViewController, animated: true)
     }
 }
 
@@ -119,28 +126,30 @@ extension ProfileViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let item = items[indexPath.row]
         switch item {
-        case .profile:
+        case let .profile(info):
             guard let cell = tableView.dequeueReusableCell(
                 withIdentifier: Constants.profileCellIdentifire,
                 for: indexPath
             ) as? ProfileCell else { return UITableViewCell() }
-            cell.backgroundColor = .blue
+            cell.selectionStyle = .none
+            cell.configure(with: info)
+            cell.present = { [weak self] in
+                self?.showWkWebViewController()
+            }
             return cell
-        case .highlights:
+        case let .highlights(info):
             guard let cell = tableView.dequeueReusableCell(
                 withIdentifier: Constants.profileHighlightsCellIdentifire,
                 for: indexPath
             ) as? ProfileHighlightsCell else { return UITableViewCell() }
-            cell.backgroundColor = .red
-
+            cell.selectionStyle = .none
+            cell.setupCell(with: info)
             return cell
         case .photos:
             guard let cell = tableView.dequeueReusableCell(
                 withIdentifier: Constants.profilePhotosCellIdentifire,
                 for: indexPath
             ) as? ProfilePhotosCell else { return UITableViewCell() }
-            cell.backgroundColor = .yellow
-
             return cell
         }
     }
@@ -151,7 +160,7 @@ extension ProfileViewController: UITableViewDelegate {
         let cell = items[indexPath.row]
         switch cell {
         case .profile:
-            return CGFloat(220)
+            return CGFloat(230)
         case .highlights:
             return CGFloat(100)
         case .photos:

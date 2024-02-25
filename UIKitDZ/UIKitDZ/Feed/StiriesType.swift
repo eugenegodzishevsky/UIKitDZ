@@ -5,10 +5,10 @@ import Foundation
 
 /// модель историй
 struct Stories {
-    // автар
+    /// автар
     let imageName: String
-    // имя аккаунта
+    /// имя аккаунта
     let name: String
-    // есть ли кнопка добавть сториз
+    /// есть ли кнопка добавть сториз
     let addButton: Bool
 }

@@ -5,8 +5,8 @@ import Foundation
 
 /// модель рекомендации
 struct Recommended {
-    // картинка
+    /// картинка
     let imageName: String
-    // текст
+    /// текст
     let label: String
 }

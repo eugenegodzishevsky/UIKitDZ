@@ -271,6 +271,8 @@ final class NewPostCell: UITableViewCell {
     }
 }
 
+//MARK: - Extension UIScrollViewDelegate
+
 extension NewPostCell: UIScrollViewDelegate {
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         pageControll.currentPage = Int(scrollView.contentOffset.x / UIScreen.main.bounds.width)

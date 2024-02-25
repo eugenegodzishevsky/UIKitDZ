@@ -3,12 +3,12 @@
 
 import Foundation
 
-// типы строк профиля
+/// типы строк профиля
 enum ProfileCellTypes {
-    // профиль
+    /// профиль
     case profile(Profile)
-    // хайлайтсы
+    /// хайлайтсы
     case highlights([Highlights])
-    // фотографии
+    /// фотографии
     case photos
 }

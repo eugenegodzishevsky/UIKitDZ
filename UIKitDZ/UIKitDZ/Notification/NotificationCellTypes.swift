@@ -5,8 +5,8 @@ import Foundation
 
 /// коментарий или предложка подписаться
 enum CellNotificationType {
-    // комент без кнопки
+    /// комент без кнопки
     case comment([CommentItemCell])
-    // комент с кнопкой
+    /// комент с кнопкой
     case subscribe([SubscribeItemCell])
 }

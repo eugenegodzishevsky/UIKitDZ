@@ -69,7 +69,7 @@ class ProfilePhotosCell: UITableViewCell {
     }
 }
 
-// MARK: - CollectionView DataSource Methods
+// MARK: - CollectionView DataSource
 
 extension ProfilePhotosCell: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {

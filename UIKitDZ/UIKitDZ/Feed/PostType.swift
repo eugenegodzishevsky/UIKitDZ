@@ -5,16 +5,16 @@ import Foundation
 
 /// модель поста
 struct Post {
-    // аватар
+    /// аватар
     let imageUserName: String
-    // имя аккаунта
+    /// имя аккаунта
     let username: String
-    // картинка
+    /// картинка
     let postImageName: [String]
-    // количество лайков
+    /// количество лайков
     let numberLikes: String
-    // комент
+    /// комент
     let userComent: String
-    // время поста
+    /// время поста
     let time: String
 }

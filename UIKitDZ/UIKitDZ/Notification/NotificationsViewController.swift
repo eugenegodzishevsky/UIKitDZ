@@ -111,7 +111,6 @@ final class NotificationsViewController: UIViewController {
         let tableView = UITableView()
         tableView.separatorStyle = .none
         tableView.dataSource = self
-        tableView.delegate = self
         tableView.register(CommentCell.self, forCellReuseIdentifier: Constants.identifierComments)
         tableView.register(
             SubscribeCell.self,
@@ -189,7 +188,7 @@ extension NotificationsViewController: UITableViewDataSource {
         }
     }
 
-    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+    private func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let label = UILabel()
         label.backgroundColor = .white
         label.font = UIFont.boldSystemFont(ofSize: 16)
@@ -197,7 +196,3 @@ extension NotificationsViewController: UITableViewDataSource {
         return label
     }
 }
-
-// MARK: - TableView Delegate Methods
-
-extension NotificationsViewController: UITableViewDelegate {}

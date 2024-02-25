@@ -9,8 +9,7 @@ class WKWebViewController: UIViewController {
     // MARK: - Constants
 
     private enum Constants {
-        static let link =
-            "https://habr.com/ru/companies/simbirsoft/articles/646687/" // "https://www.spacex.com/vehicles/starship/"
+        static let link = "https://www.spacex.com/vehicles/starship/"
     }
 
     // MARK: - Private Properties

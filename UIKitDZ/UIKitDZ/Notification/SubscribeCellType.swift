@@ -5,8 +5,8 @@ import Foundation
 
 /// комент с кнопкой
 struct SubscribeItemCell {
-    // картинка юзера
+    /// картинка юзера
     let imageUserName: String
-    // комментарий юзера
+    /// комментарий юзера
     let userComment: String
 }

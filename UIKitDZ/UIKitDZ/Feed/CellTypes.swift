@@ -3,12 +3,12 @@
 
 import Foundation
 
-// типы строк с постами
+/// типы строк с постами
 enum CellTypes {
-    // истории
+    /// истории
     case stories([Stories])
-    // пост
+    /// пост
     case post([Post])
-    // рекомендации
+    /// рекомендации
     case recommended([Recommended])
 }

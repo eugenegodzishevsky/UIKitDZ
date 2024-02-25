@@ -5,8 +5,8 @@ import Foundation
 
 /// модель хайлайтсов
 struct Highlights {
-    // картинка
+    /// картинка
     let imageName: String
-    // подпись
+    /// подпись
     let text: String
 }

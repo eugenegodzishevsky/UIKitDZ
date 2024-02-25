@@ -5,10 +5,10 @@ import Foundation
 
 /// комент простой
 struct CommentItemCell {
-    // аватар
+    /// аватар
     var userImageName: String
-    // коментарий
+    /// коментарий
     var userText: String
-    // картинка поста
+    /// картинка поста
     var imageName: String
 }

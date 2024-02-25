@@ -9,13 +9,12 @@ class WKWebViewController: UIViewController {
     // MARK: - Constants
 
     private enum Constants {
-        static let link = "https://www.spacex.com/vehicles/starship/"
+        static let link = "https://www.google.com/"
     }
 
     // MARK: - Private Properties
 
     private let webView = WKWebView()
-    // private let toolBar = UIToolbar()
 
     // MARK: - Life Cycle
 
@@ -23,9 +22,6 @@ class WKWebViewController: UIViewController {
         super.viewDidLoad()
         addViews()
         loadRequest()
-//        setupBarButtonItem()
-//        setupConstraintsToolBar()
-//        loadRequest()
     }
 
     // MARK: - Private Methods
@@ -33,7 +29,6 @@ class WKWebViewController: UIViewController {
     private func addViews() {
         view.addSubview(webView)
 
-        webView.navigationDelegate = self
         webView.translatesAutoresizingMaskIntoConstraints = false
         webView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
         webView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
@@ -44,17 +39,5 @@ class WKWebViewController: UIViewController {
         guard let url = URL(string: Constants.link) else { return }
         let urlRequest = URLRequest(url: url)
         webView.load(urlRequest)
-    }
-}
-
-// MARK: - WKNavigationDelegate
-
-extension WKWebViewController: WKNavigationDelegate {
-    func webView(
-        _ webView: WKWebView,
-        decidePolicyFor navigationAction: WKNavigationAction,
-        decisionHandler: @escaping (WKNavigationActionPolicy) -> Void
-    ) {
-        decisionHandler(.allow)
     }
 }

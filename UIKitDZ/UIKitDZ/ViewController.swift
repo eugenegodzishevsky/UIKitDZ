@@ -1,7 +1,7 @@
 // ViewController.swift
 // Copyright © RoadMap. All rights reserved.
 
-final import UIKit
+import UIKit
 
 /// первый экран со светофором
 final class ViewController: UIViewController {

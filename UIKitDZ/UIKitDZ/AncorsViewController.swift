@@ -5,7 +5,6 @@ import UIKit
 
 /// экран с констрейнтами на якорях
 final class AncorsViewController: UIViewController {
-    
     // MARK: - Visual Components
 
     let redView: UIView = {

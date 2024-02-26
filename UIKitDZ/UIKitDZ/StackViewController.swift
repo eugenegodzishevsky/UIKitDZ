@@ -3,9 +3,9 @@
 
 import UIKit
 
-/// второй экран со стаквью
-
 // MARK: - Visual Components
+
+/// второй экран со стаквью
 
 final class StackViewController: UIViewController {
     let redView: UIView = {
